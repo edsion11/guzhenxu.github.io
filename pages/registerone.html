@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>教师注册</title>
+	<link rel="stylesheet" type="text/css" href="../resources/css/register.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<div>
+		<div class="Register">
+				<br/><br/>
+				<a href="register.html" class="two"><span class="RegisterFontTwo">学生注册</span></a>
+				<a href="registerone.html" class="two"><span class="RegisterFontTwo white">教师注册</span></a>
+				<br/>
+				<br/>
+			    <div class="RegisterFrame">
+			        <span class="RegisterFontOne">教师编号</span>
+			        <input type="text" onblur="user()" id="input_user" class="RegisterTextFour" placeholder="填写用户名 可作为账号登录">
+				</div>
+				<div class="RegisterFrame">
+					<span class="RegisterFontOne">姓名</span>
+					<input type="text" class="RegisterTextTwo">
+				</div>
+			    <div class="RegisterFrame">
+			        <span class="RegisterFontOne">性别</span>
+			        <select class="RegisterTextFive">
+						<option>女</option>
+				        <option>男</option>
+			        </select>
+		        </div>
+			    <div class="RegisterFrame">
+				    <span class="RegisterFontOne">手机号</span>
+				    <input type="text" onblur="number()" id="input_number" class="RegisterTextThree" placeholder="您的手机号 可作为账号登录">
+				    <span class="RegisterFontThree" id="errornumber">请输入正确的手机号</span>
+				</div>
+			    <div class="RegisterFrame">
+					<span class="RegisterFontOne">邮箱</span>
+					<input type="text" onblur="email()" id="input_email" class="RegisterTextTwo" placeholder="您的邮箱 可作为账号登录">
+				    <span class="RegisterFontThree" id="erroremail">请输入正确的邮箱</span>
+				</div>
+				<div class="RegisterFrame">
+					<span class="RegisterFontOne">学校</span>
+					<input type="password" class="RegisterTextTwo">
+				</div>
+				<div class="RegisterFrame">
+					<span class="RegisterFontOne">学院</span>
+					<input type="password" class="RegisterTextTwo">
+				</div>	
+				<div class="RegisterFrame">
+					<span class="RegisterFontOne">密码</span>
+					<input type="password" class="RegisterTextTwo" id="pwd">
+				</div>
+				<div class="RegisterFrame">
+					<span class="RegisterFontOne">确认密码</span>
+					<input type="password" onblur="validate()" class="RegisterTextOne" id="pwd1">	
+				    <span class="RegisterFontThree" id="tishi">请保证两次输入的密码相同</span>
+				</div>
+				<div class="RegisterFrame">
+					<input type="checkbox">
+					<span class="one"></span>我已阅读并同意遵守《服务条款》与《隐私政策》</span>
+				</div>
+				<div class="RegisterFrame">
+					<button class="RegisterButton" type="submit">注册</button>
+				    <a href="land.html" class="RegisterA">已有账号？去登录</a>
+				</div>	
+		</div>
+	</div>
+	<script type="text/javascript" src="../resources/js/register.js"></script>
+</body>	

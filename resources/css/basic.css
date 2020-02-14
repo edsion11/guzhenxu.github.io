@@ -1,0 +1,116 @@
+*{
+    text-decoration:none;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+      font-family:
+      'HelveticaNeue-UltraLight', 
+      'Helvetica Neue UltraLight', 
+      Roboto, 
+      Arial, 
+      Sans-serif;
+    backface-visibility:hidden;
+    background-color:#FFd39b;/*网页背景色 这个地方背景颜色不是白的*/
+  }
+  
+  nav{
+    float: left;
+    position: relative;
+    top: 2px;
+  
+  }
+  .nav1{
+    float: left;
+    position: relative;
+    top: 0px;
+  
+  }
+  nav a {
+    display:block;
+    height:50px;
+    line-height:40px;
+    background:#fff;/*菜单背景色*/
+    width:200px;
+    padding-left:10px;
+    text-decoration:none;
+    color:#FFc125;
+    text-align: center;
+    box-shadow:5px 0 0 #FFd39b;
+  }
+  
+  nav a:nth-child(1) { box-shadow:5px 0 0 #f1c40f;}
+  nav a:nth-child(2) { box-shadow:5px 0 0 #2ecc71;}
+  nav a:nth-child(3) { box-shadow:5px 0 0 #e67e22;}
+  nav a:nth-child(4) { box-shadow:5px 0 0 #c0392b;}
+  nav a:nth-child(5) { box-shadow:5px 0 0 #2c3e50;}
+  nav a:nth-child(6) { box-shadow:5px 0 0 #3498db;}
+  nav a:nth-child(7) { box-shadow:5px 0 0 #f1c40f;}
+  nav a:nth-child(8) { box-shadow:5px 0 0 #2ecc71;}
+  
+  input[id*="joacims-menu"]:checked ~ nav a {
+    margin-left:0px;
+  }
+  
+  input[id*="joacims-menu"]:checked ~ nav a:hover {
+    width:220px;
+    height: 50px;
+  }
+  
+  input[id*="joacims-menu"] ~ nav a {
+    margin-left:-110px;
+    transition:.6s margin;
+  }
+  
+  input[id*="joacims-menu"] ~ nav a:hover {
+    background:#FFd39b;/*hover以后的颜色*/
+    color:#fff;
+  }
+  /*<!-- 上方为导航栏css 下方为学生界面css-->*/
+  .topdiv{
+    height: 60px; 
+    /*border-bottom: thick dashed black;*/
+    background-color: #fff;
+    box-shadow: 0px 2px 0px 0px #888888;
+  }
+  .top1{
+    position: relative;
+    top: 3px;
+    left: 20px;
+    float: left;
+  }
+  .top2{
+    float: right;
+    position: relative;
+    top: 30px;
+    right: 10px;
+  }
+  .bigdiv{
+    position: relative;
+    float: right;
+    top: 2px;
+    height: auto;
+    width: 80%; 
+    background-color:#FFd39b;/*右侧页面背景颜色*/
+  }
+  .big0{
+    margin-top: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: #FFd39b;
+    border-radius: 10px;
+  }
+  .big1{
+    width: 99%;
+    height: auto;
+    margin-left:5px;
+    border-radius: 10px;
+    background-color:#FFd39b;
+    padding-left: 5px;
+  }
+  hr{
+    border-top: thick dashed black;
+  }
+  

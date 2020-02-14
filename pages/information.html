@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改个人信息</title>
+	<link rel="stylesheet" type="text/css" href="..\resources\css\information.css">
+	<link rel="stylesheet" type="text/css" href="..\resources\css\basic.css">
+
+</head>
+
+<style type="text/css">
+</style>
+
+<body>
+<div class="topdiv">
+  <div class="top1">
+    <img src="..\resources\img\logo.png" width="400px" height="90px">
+  </div>
+  <div class="top2">
+    橙子老师，您好！<a href="index.html"><button>退出登录</button></a>
+  </div>
+</div>
+<nav class="nav1"> 
+  
+<input type="checkbox" id="joacims-menu" checked hidden="hidden" />
+
+<label for="joacims-menu" hidden="hidden"><span>+</span></label>
+
+<nav>
+  <a href=""></a>
+  <a href="..\pages\teacher_index.html">首页</a>
+  <a href="..\pages\pages.html">发布考试</a>
+  <a href="..\pages\student.html">管理学生</a>
+  <a href="..\pages\papercharge.html">试题管理</a>
+  <a href="..\pages\information.html">修改信息</a>
+  <a href="">互动问题</a>
+
+  <a href=""></a>
+</nav>
+</nav>
+<!-- 上方为导航栏 下方为修改信息界面-->
+
+<div class="bigdiv">
+  <div class="big1">
+    <div>
+      <div class="Register">
+          <br/>
+          <br/>
+          <br/>
+
+            <div class="RegisterFrame">
+                <span class="RegisterFontOne">工号</span>
+                <input type="text" onblur="user()" id="input_user" class="RegisterTextTwo" value="040055">
+          </div>
+
+          <div class="RegisterFrame">
+            <span class="RegisterFontOne">姓名</span>
+            <input type="text" class="RegisterTextTwo" value="橙子">
+          </div>
+
+          <div class="RegisterFrame">
+              <span class="RegisterFontOne">性别</span>
+              <select class="RegisterTextFive">
+                <option>女</option>
+                <option>男</option>
+              </select>
+          </div>
+           
+          <div class="RegisterFrame">
+            <span class="RegisterFontOne">手机号</span>
+            <input type="text" onblur="number()" id="input_number" class="RegisterTextThree" value="13098287527">
+            <span class="RegisterFontThree" id="errornumber">请输入正确的手机号</span>
+          </div>
+
+          <div class="RegisterFrame">
+            <span class="RegisterFontOne">邮箱</span>
+            <input type="text" onblur="email()" id="input_email" class="RegisterTextTwo" value="3829018665@qq.com">
+            <span class="RegisterFontThree" id="erroremail">请输入正确的邮箱</span>
+          </div>
+
+          <div class="RegisterFrame">
+            <span class="RegisterFontOne">学校</span>
+            <input type="text" class="RegisterTextTwo" value="东北师范大学">
+          </div>
+
+          <div class="RegisterFrame">
+            <span class="RegisterFontOne">学院</span>
+            <input type="text" class="RegisterTextTwo" value="信息科学与技术学院">
+          </div>	
+
+          <div class="RegisterFrame">
+              <span class="RegisterFontOne">输入密码</span>
+              <input type="password" class="RegisterTextOne" id="pwd1">	
+            </div>
+  
+
+            <div class="RegisterFrame">
+                <span class="RegisterFontOne">修改密码</span>
+                <input type="password" class="RegisterTextOne" id="pwd1">	
+              </div>
+    
+          <div class="RegisterFrame">
+            <span class="RegisterFontOne">确认密码</span>
+            <input type="password" onblur="validate()" class="RegisterTextOne" id="pwd1">	
+            <span class="RegisterFontThree" id="tishi">请保证两次输入的密码相同</span>
+          </div>
+    
+          <div class="RegisterFrame">
+            <button class="RegisterButton" type="submit" text-align:"center" onclick="hhh()">确认修改</button>
+          </div>	
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <script>
+    function hhh(){
+      alert("修改成功");
+    }
+  </script>
+</body>
+</html>

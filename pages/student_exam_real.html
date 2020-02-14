@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>学生考试界面</title>
+  <link rel="stylesheet" type="text/css" href="..\resources\css\pages.css">
+  <link rel="stylesheet" type="text/css" href="..\resources\css\basic.css">
+  <script src="..\resources\js\jquery.min.js"></script>
+  <link href="..\resources\css\bootstrap.min.css" rel="stylesheet">
+  <script src="..\resources\js\bootstrap.min.js"></script>
+</head>
+
+<style type="text/css">
+  body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    font-family:
+      'HelveticaNeue-UltraLight',
+      'Helvetica Neue UltraLight',
+      Roboto,
+      Arial,
+      Sans-serif;
+    backface-visibility: hidden;
+    background: #f0f0f0;
+    /*网页背景色 这个地方背景颜色不是白的*/
+  }
+
+  /*<!-- 上方为导航栏css 下方为学生界面css-->*/
+  .topdiv {
+    height: 60px;
+    /*border-bottom: thick dashed black;*/
+    background-color: #fff;
+    box-shadow: 0px 2px 0px 0px #888888;
+  }
+
+  .top1 {
+    position: relative;
+    top: 3px;
+    left: 20px;
+    float: left;
+  }
+
+  .top2 {
+    float: right;
+    position: relative;
+    top: 26px;
+    right: 10px;
+  }
+
+  .bigdiv {
+    position: relative;
+    float: right;
+    right: 20px;
+    top: 2px;
+    height: auto;
+    width: 90%;
+    background-color: #f0f0f0;
+    /*右侧页面背景颜色*/
+  }
+
+  .big1 {
+    float: left;
+    width: 800px;
+    height: auto;
+    background-color: #ffe4b5;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .big11 {
+    float: left;
+    background-color: #FFd39b;
+    width: 800px;
+    height: 40px;
+    padding-top: 10px;
+  }
+
+  .big12 {
+    margin-top: 10px;
+    float: left;
+    background-color: #FFe4b5;
+    width: 800px;
+  }
+
+  .big13 {
+    margin-top: 10px;
+    float: left;
+    background-color: #FFe4b5;
+    width: 800px;
+    height: 50px;
+  }
+
+  .big13 button {
+    float: right;
+    width: 100px;
+    height: 50px;
+    margin-right: 30px;
+  }
+
+  .big2 {
+    float: left;
+    width: 280px;
+    height: auto;
+    background-color: #ffe4b5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .big22 {
+    float: left;
+    width: 130px;
+    height: 50px;
+    background-color: #FFd39b;
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  .big3 {
+    width: 280px;
+    height: 150px;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  hr {
+    border-top: thick dashed black;
+  }
+  .big99{
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 5px;
+	font-weight: 700;
+  }
+</style>
+
+<body>
+  <div class="topdiv">
+    <div class="top1">
+      <img src="..\resources\img\logo.png" width="340px" height="54px">
+    </div>
+    <div class="top2">
+      小明同学，你好！<button class="btn btn-warning">退出登录</button>
+    </div>
+  </div>
+  <!-- 上方为导航栏 下方为学生界面-->
+  <div class="bigdiv">
+    <div class="big1">
+      <div class="big11">
+        <b style="font-size: 18px;">试卷:电工电子实验 考试1</b><span> 共20题 总分100 限时90分钟</span></div>
+      <div class="big12">
+        <p>1.2015年12月18日至21日，中央经济工作会议在北京举行，会议部署2016年经济工作，重点是落实_____要求，推进_____结构性改革，推动经济持续健康发展。（　　）</p>
+        <label><input name="Fruit" type="radio" value="" />A.“十三五”规划建议 需求侧</label><br>
+        <label><input name="Fruit" type="radio" value="" />B.十八届五中全会 需求侧 </label><br>
+        <label><input name="Fruit" type="radio" value="" />C.“十三五”规划建议 供给侧 </label><br>
+        <label><input name="Fruit" type="radio" value="" />D.十八届五中全会 供给侧 </label>
+      </div>
+	  2. 我们通过__________长距离连接两台计算机使它们通讯。<br>
+	 <div class="big99">
+	  <p>
+	    <input type="radio" name="Q2" value="LAN" onClick=Q2.value="A">
+	    LAN<br>
+	    
+	    <input type="radio" name="Q2" value="*WAN" onClick=Q2.value="*">
+	    WAN<br>
+	    
+	    <input type="radio" name="Q2" value="WAIS" onClick=Q2.value="C">
+	    WAIS<br>
+	  </p>
+	  </div><br>
+	  3. HUB是指：__________<br>
+	  	 <div class="big99">
+	   <p>
+	     <input type="radio" name="Q3" value="网关" onClick=Q3.value="网关">
+	     网关<br>
+	    
+	     <input type="radio" name="Q3" value="网桥" onClick=Q3.value="网桥">
+	     网桥<br>
+	    
+	     <input type="radio" name="Q3" value="路由器" onClick=Q3.value="路由器">
+	     路由器<br>
+	    
+	     <input type="radio" name="Q3" value="*集线器" onClick=Q3.value="*">
+	     集线器<br>
+	    
+	   </p>
+	   </div><br>
+	   4. 56K MODEM的传输速度为：__________ <br> 
+	   <div class="big99">
+	   <p>
+	     <input type="radio" name="Q4" value="56Kbytes" onClick=Q4.value="A">
+	     每秒传输56K bytes的数据。<br> 
+	    
+	     <input type="radio" name="Q4" value="*56kbps" onClick=Q4.value="*">
+	     每秒传输56k bits的数据。 <br>
+	    
+	   </p>
+	   </div><br>
+	   5. Gateway是指：__________<br>
+	  <div class="big99">
+	   <p>
+	     <input type="radio" name="Q5" value="*网关" onClick=Q5.value="*">
+	     网关<br>
+	    
+	     <input type="radio" name="Q5" value="网桥" onClick=Q5.value="B">
+	     网桥<br>
+	    
+	     <input type="radio" name="Q5" value="路由器" onClick=Q5.value="C">
+	     路由器<br>
+	    
+	     <input type="radio" name="Q5" value="集线器" onClick=Q5.value="D">
+	     集线器<br>
+	    
+	   </p>
+	   </div><br>
+	   6. Http默认的端口是：__________ <br>
+	  <div class="big99">
+	   <p>
+	     <input type="radio" name="Q6" value="8080" onClick=Q6.value="A">
+	     8080<br>
+	   
+	     <input type="radio" name="Q6" value="*80" onClick=Q6.value="*">
+	     80
+	   <br>
+	     <input type="radio" name="Q6" value="25" onClick=Q6.value="25">
+	     25<br>
+	   
+	   </p>
+	   </div><br>
+	   7. JavaScript是一种类似于C++的语言，比较难掌握：__________<br>
+	  <div class="big99">
+	   <p>
+	     <input type="radio" name="Q7" value="True" onClick=Q7.value="T">
+	     True<br>
+	   
+	     <input type="radio" name="Q7" value="*False" onClick=Q7.value="*">
+	     False<br>
+	   
+	   </p>
+	   </div><br>
+	   8. JAVA是 __________ 公司的产品：<br>  
+	  <div class="big99">
+	   <p>
+	     <input type="radio" name="Q8" value="Microsoft" onClick=Q8.value="A">
+	     Microsoft<br>
+	    
+	     <input type="radio" name="Q8" value="Novell" onClick=Q8.value="B">
+	     Novell<br>
+	    
+	     <input type="radio" name="Q8" value="*SUN" onClick=Q8.value="*">
+	     SUN
+	    <br>
+	   </p>
+	   </div><br>
+	   9. CGI通过__________收集用户填写的表单信息：<br>  
+	  <div class="big99">
+	   <p>
+	     <input type="radio" name="Q9" value="Form" onClick=Q9.value="A">
+	     Form<br>
+	    
+	     <input type="radio" name="Q9" value="*环境变量" onClick=Q9.value="*">
+	     环境变量<br>
+	    
+	     <input type="radio" name="Q9" value="javascripts脚本" onClick=Q9.value="C">
+	     javascripts脚本<br>
+	    
+	   </p>
+	   </div><br>
+	   <div class="big99">
+	   10. 服务器响应"404 error"的含义是： __________   <br>
+	   <p>
+	     <input type="radio" name="Q10" value="*文件不存在" onClick=Q10.value="*">
+	     文件不存在<br>
+	     <input type="radio" name="Q10" value="Server error" onClick=Q10.value="B">
+	     服务器错误<br>
+	  <input type="radio" name="Q10" value="Client error" onClick=Q10.value="C">
+	     浏览器错误<br>
+	    
+	   </p>
+	   </div>
+      <hr>
+
+      <div class="big13">
+        <a href="student_exam_index.html"><button class="btn btn-primary" style="width: 150px;height: 50px;" id="ti">提交试卷</button></a>
+      </div>
+      <hr>
+    </div>
+    <div class="big2">
+      <div class="big22">
+        <br>
+        <p>答题卡</p>
+      </div>
+      <div class="big22" style="margin-right: 0px;">
+        <br>
+        <div id="countdown">
+          <span>90</span>分钟<span>01</span>秒
+          <input type="button" value="暂停" />
+        </div>
+      </div>
+      <div class="big3">
+        <p>单选题：15个 共60分</p>
+        <table border="1px" align="center" width="260px" id="tb">
+          <tr>
+            <td value="1">1</td>
+            <td value="2">2</td>
+            <td value="3">3</td>
+            <td value="4">4</td>
+            <td value="5">5</td>
+            <td value="6">6</td>
+          </tr>
+          <tr>
+            <td value="7">7</td>
+            <td value="8">8</td>
+            <td value="9">9</td>
+			<td  value="10"width="44.8px">10</td>
+          </tr>
+        </table>
+      </div>
+      <hr>
+      <div class="big3" style="padding-top: 0px;">
+        <p>多选题： 5个 共40分</p>
+        <table border="1px" align="center" width="260px">
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+          </tr>
+        </table>
+      </div>
+      <hr>
+      <div class="big3" style="padding-top: 0px;">
+        <p>填空题： 2个 共10分</p>
+        <table border="1px" align="center" width="260px">
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+          </tr>
+        </table>
+      </div>
+      <div class="big13" style="width: 280px;">
+        <a href="student_exam_into.html"><button class="btn btn-danger">退出答题</button></a>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">
+	  $(function () {
+        $("#ti").click(function(){
+        	alert("提交成功");
+        })
+		$('input[type=radio][name=Fruit]').change(function() {
+			$("table td[value=1]").css("background-color","skyblue");
+		});
+		$('input[type=radio][name=Q2]').change(function() {
+			$("table td[value=2]").css("background-color","skyblue");
+		});
+		$('input[type=radio][name=Q3]').change(function() {
+			$("table td[value=3]").css("background-color","skyblue");
+		});
+		$('input[type=radio][name=Q4]').change(function() {
+			$("table td[value=4]").css("background-color","skyblue");
+		});
+		
+		$('input[type=radio][name=Q5]').change(function() {
+			$("table td[value=5]").css("background-color","skyblue");
+		});
+		$('input[type=radio][name=Q6]').change(function() {
+			$("table td[value=6]").css("background-color","skyblue");
+		});
+		$('input[type=radio][name=Q7]').change(function() {
+			$("table td[value=7]").css("background-color","skyblue");
+		});
+		$('input[type=radio][name=Q8]').change(function() {
+			$("table td[value=8]").css("background-color","skyblue");
+		});
+		$('input[type=radio][name=Q9]').change(function() {
+			$("table td[value=9]").css("background-color","skyblue");
+		});
+		$('input[type=radio][name=Q10]').change(function() {
+			$("table td[value=10]").css("background-color","skyblue");
+		});
+
+	});
+		  /*-------------------------------------------------------------------------*/
+    window.onload = function () {
+      var oCountDown = document.getElementById("countdown");
+      var aInput = oCountDown.getElementsByTagName("input")[0];
+      var timer = null;
+      aInput.onclick = function () {
+        this.className == "" ? (timer = setInterval(updateTime, 1000), updateTime()) : (clearInterval(timer));
+        this.className = this.className == '' ? "cancel" : '';
+      };
+      function format(a) {
+        return a.toString().replace(/^(\d)$/, '0$1');
+      }
+      function updateTime() {
+        var aSpan = oCountDown.getElementsByTagName("span");
+        var oRemain = aSpan[0].innerHTML.replace(/^0/, '') * 60 + parseInt(aSpan[1].innerHTML.replace(/^0/, ''));
+        if (oRemain <= 0) {
+          clearInterval(timer);
+          return;
+        }
+        oRemain--;
+        aSpan[0].innerHTML = format(parseInt(oRemain / 60));
+        oRemain %= 60;
+        aSpan[1].innerHTML = format(parseInt(oRemain));
+      }
+      // 加上此句即可。
+      aInput.click();
+    }
+  </script>
+</body>
+
+</html>

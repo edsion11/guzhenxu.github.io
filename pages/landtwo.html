@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/land.css">
+    <meta charset="utf-8">
+    <script src="../resources/js/common.js"></script>
+</head>
+<body>
+   <div><!--整个页面-->
+       <div class="LandFrame">
+                <br/>
+				<a href="landtwo.html" class="two"><span class="LandFontTwo hhh">登录</span></a>
+				<br/><br/>
+			    <div class="LandSmallFrame">
+			        <span class="LandFontOne">管理员编号</span>
+                    <input type="text" onblur="user()" id="input_user" class="LandTextFive">
+                    <span id="tipsone">请输入正确的用户名</span>
+				</div>
+				<div class="LandSmallFrame">
+					<span class="LandFontOne">密码</span>
+                    <input type="password" onblur="password()" class="LandTextTwo" id="input_password" placeholder="输入密码">
+                    <span id="tipstwo">请输入密码</span>
+                </div>
+                <br/>
+                <div class="LandSmallFrame">
+                    <input type="checkbox"><span class="LandFontThree">下次自动登录</span>
+                    <a class="LandAOne">忘记密码</a>
+                </div>
+                <div class="LandSmallFrame">
+                    <a href="frame_a.html"><button class="LandButton" type="submit">登录</button></a>
+                    <a href="register.html" class="LandATwo">没有账号 去注册</a>
+                </div>
+            </div>
+		</div>
+    </div>
+    <script type="text/javascript" src="../resources/js/land.js"></script>
+</body>
+</html>

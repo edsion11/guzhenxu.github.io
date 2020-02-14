@@ -1,0 +1,71 @@
+.big1{
+    width: 850px;
+    height: auto;
+    margin-left:280px;
+  }
+.RegisterFontTwo{
+    margin: 20px 40px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+.RegisterFrame{
+    margin: 5px 0 10px 20px;
+}
+.RegisterFontOne{
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+.RegisterFontThree{
+    font-size: 10px;
+    width: 10px;
+    color: rgb(124, 124, 124);
+}
+.RegisterTextSix{
+    margin: 0 0 0 0;
+    height: 20px;
+    width: 180px;
+}
+.RegisterTextOne{
+    margin: 0 0 0 10px;
+    height: 20px;
+    width: 180px;
+}
+.RegisterTextTwo{
+    margin: 0 0 0 38px;
+    height: 20px;
+    width: 180px;
+}
+.RegisterTextThree{
+    margin: 0 0 0 24px;
+    height: 20px;
+    width: 180px;
+}
+.RegisterTextFive{
+    margin: 0 0 0 38px;
+    height: 20px;
+    width: 183.5px;
+}
+.RegisterCheckbox{
+    font-size:12px; 
+}
+.RegisterButton{
+    width: 255px;
+    height: 30px;
+    border: 0;
+    border-radius:3px; 
+    background-color: rgb(224, 105, 35);
+    color:rgb(255, 255, 255);
+    cursor: pointer;
+    text-align: center;
+}
+.RegisterA{
+    text-decoration: none;
+    margin:0 0 0 70px;
+    color: rgb(224, 105, 35);
+}
+.two{
+    text-decoration: none;
+}
+.white{
+    color: rgb(224, 105, 35);
+}

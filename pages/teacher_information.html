@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>修改个人信息</title>
+	<link rel="stylesheet" type="text/css" href="..\resources\css\pages.css">
+	<link rel="stylesheet" type="text/css" href="..\resources\css\basic.css">
+    <script src="..\resources\js\jquery.min.js"></script>
+    <link href="..\resources\css\bootstrap.min.css" rel="stylesheet">
+    <script src="..\resources\js\bootstrap.min.js"></script>
+    <body>
+    <div class="topdiv">
+      <div class="top1">
+        <img src="..\resources\img\logo.png" width="340px" height="54px">
+      </div>
+      <div class="top2">
+        橙子老师，您好！<a href=index.html><button>退出登录</button></a>
+      </div>
+    </div>
+    <nav class="nav1"> 
+      
+        <input type="checkbox" id="joacims-menu" checked="" hidden="hidden">
+        <label for="joacims-menu" hidden="hidden"><span>+</span></label>
+    
+    <nav>
+            <a href=""></a>
+            <a href="..\pages\teacher_index.html">首页</a>
+            <a href="..\pages\pages.html">试卷管理</a>
+            <a href="..\pages\student_information.html">管理学生</a>
+            <a href="..\pages\pagers_information.html">试题管理</a>
+            <a href="..\pages\grade_upload.html">登记成绩</a>
+            <a href="..\pages\teacher_information.html">修改信息</a>
+            <a href="">互动问题</a>   
+            <a href=""></a>
+              </nav>
+    </nav>
+    <!-- 上方为导航栏 下方为学生界面-->
+    
+    <div class="bigdiv" >
+        <div class="big0" >
+            <br>
+            <h3 style="margin-top: 0px; margin-left: 20px;">修改个人信息</h3>
+        </div>
+    <!-- 上方为标题栏，下方为功能区域 -->
+    <div class="big1" style="text-align:center;">
+        <br/>
+        <ul id="pages" class="nav nav-tabs">
+                <li class="active">
+                   <a href="#pages1" data-toggle="tab">
+                      修改个人信息
+                   </a>
+                </li>        
+                <!-- 试题管理结束 -->
+                <!-- <li><a href="#pages2" data-toggle="tab">试题模块管理</a></li> -->
+                <!-- 试题模块管理结束 -->
+        </ul>
+        <!-- 添加试题 -->
+        <br/>
+        <div style="text-align:center;" ><img src="..\resources\img\student.jpg" width="200px" height="200px" class="img-circle"></div>
+        <br/>     
+
+        <span>教师编号</span>&nbsp;
+        <input type="text" class="form-control" value="040055" style="display:inline-block;width: 50%">             <br/>
+             <br/>
+
+        <span>姓名</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" class="form-control" value="橙子" style="display:inline-block;width: 50%">             <br/>
+             <br/>
+
+        <span>手机号码</span>&nbsp;
+        <input type="text" class="form-control" style="display:inline-block;width: 50%">        <br/>
+        <br/>
+        <span>所授课程</span>&nbsp;
+        <input type="text" class="form-control" style="display:inline-block;width: 50%">             <br/>
+             <br/>
+        <span>学校</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" class="form-control" value="南京邮电大学" style="display:inline-block;width: 50%">        <br/>
+        <br/>
+        <span>学院</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" class="form-control" style="display:inline-block;width: 50%">        <br/>
+        <br/>
+        <span>原密码</span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="password" class="form-control" style="display:inline-block;width: 50%">        <br/>
+        <br/>
+        <span>修改密码</span>&nbsp;
+        <input type="password" class="form-control"  style="display:inline-block;width: 50%">        <br/>
+        <br/>
+        <span>确认密码</span>&nbsp;
+        <input type="password" class="form-control"  style="display:inline-block;width: 50%">
+        <br/>
+        <br/>
+        <button type="button" class="btn btn-primary" >修改</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="teacher_index.html"><button type="button" class="btn btn-danger" >关闭</button></a>
+    <!-- 这两div不许动     -->
+    </div>
+    </div>
+</body>
+</html>

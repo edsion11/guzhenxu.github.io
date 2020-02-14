@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人信息修改</title>
+<link rel="stylesheet" type="text/css" href="..\resources\css\pages.css">
+  <link rel="stylesheet" type="text/css" href="..\resources\css\basic.css">
+    <script src="..\resources\js\jquery.min.js"></script>
+    <link href="..\resources\css\bootstrap.min.css" rel="stylesheet">
+    <script src="..\resources\js\bootstrap.min.js"></script>
+</head>
+
+<style type="text/css">
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  font-family:
+    'HelveticaNeue-UltraLight', 
+    'Helvetica Neue UltraLight', 
+    Roboto, 
+    Arial, 
+    Sans-serif;
+  backface-visibility:hidden;
+  background:#f0f0f0;/*网页背景色 这个地方背景颜色不是白的*/
+}
+
+nav{
+  float: left;
+  position: relative;
+  top: 2px;
+
+}
+.nav1{
+  float: left;
+  position: relative;
+  top: 0px;
+
+}
+nav a{
+  display:block;
+  height:50px;
+  line-height:40px;
+  background:#fff;/*菜单背景色*/
+  width:200px;
+  padding-left:10px;
+  text-decoration:none;
+  color:#FFc125;
+  text-align: center;
+  box-shadow:5px 0 0 #FFa500;
+}
+
+nav a:nth-child(1) { box-shadow:5px 0 0 #f1c40f;}
+nav a:nth-child(2) { box-shadow:5px 0 0 #2ecc71;}
+nav a:nth-child(3) { box-shadow:5px 0 0 #e67e22;}
+nav a:nth-child(4) { box-shadow:5px 0 0 #c0392b;}
+nav a:nth-child(5) { box-shadow:5px 0 0 #2c3e50;}
+nav a:nth-child(6) { box-shadow:5px 0 0 #3498db;}
+nav a:nth-child(7) { box-shadow:5px 0 0 #f1c40f;}
+nav a:nth-child(8) { box-shadow:5px 0 0 #2ecc71;}
+
+input[id*="joacims-menu"]:checked ~ nav a {
+  margin-left:0px;
+}
+
+input[id*="joacims-menu"]:checked ~ nav a:hover {
+  width:220px;
+  height:50px;
+}
+
+input[id*="joacims-menu"] ~ nav a {
+  margin-left:-110px;
+  transition:.6s margin;
+}
+
+input[id*="joacims-menu"] ~ nav a:hover {
+  background:#FFd39b;/*hover以后的颜色*/
+  color:#fff;
+}
+/*<!-- 上方为导航栏css 下方为学生界面css-->*/
+.topdiv{
+  height: 60px; 
+  /*border-bottom: thick dashed black;*/
+  background-color: #fff;
+  box-shadow: 0px 2px 0px 0px #888888;
+}
+.top1{
+  position: relative;
+  top: 3px;
+  left: 20px;
+  float: left;
+}
+.top2{
+  float: right;
+  position: relative;
+  top: 26px;
+  right: 10px;
+}
+.bigdiv{
+  position: relative;
+  float: right;
+  right:20px;
+  top: 2px;
+  height: auto;
+  width: 80%; 
+  background-color: #f0f0f0;/*右侧页面背景颜色*/
+}
+.big1{
+  width: 750px;
+  height: auto;
+  margin-left:75px;
+  background-color: #FFd39b;
+  padding-bottom: 20px;
+}
+.big1 input{
+  margin-left: 10px;
+}
+hr{
+  border-top: thick dashed black;
+}
+</style>
+
+<body>
+<div class="topdiv">
+  <div class="top1">
+    <img src="..\resources\img\logo.png" width="340px" height="54px">
+  </div>
+  <div class="top2">
+    xxxx同学，你好！<button class="btn btn-warning">退出登录</button>
+  </div>
+</div>
+<nav class="nav1"> 
+  
+<input type="checkbox" id="joacims-menu" checked hidden="hidden" />
+
+<label for="joacims-menu" hidden="hidden"><span>+</span></label>
+
+<nav>
+  <a href="student_exam_index.html">在线考试</a>
+  <a href="student_check.html">成绩查询</a>
+  <a href="student_alter.html">修改信息</a>
+  <a href="student_exam_one.html">组卷练习</a>
+  <a href="">论坛交流</a>
+  <a href="">帮助与反馈</a>
+  <a href="student_index.html">返回首页</a>
+</nav>
+</nav>
+<!-- 上方为导航栏 下方为学生界面-->
+
+<div class="bigdiv">
+  <div class="big1">
+    <table align="center" style="text-align: center;">
+      <tr>
+        <td colspan="2"><h3>修改个人信息</h3></td>
+      </tr>
+      <tr>
+        <td>姓名 :</td>
+        <td><input type="text" name="name" class="form-control"></td>
+      </tr>
+      <tr>
+          <td><br></td>
+          <td><br></td>
+        </tr>
+      <tr>
+        <td>学号 :</td>
+        <td><input type="text" name="name" class="form-control"></td>
+      </tr>
+      <tr>
+          <td><br></td>
+          <td><br></td>
+        </tr>
+      <tr>
+        <td>专业 :</td>
+        <td><input type="text" name="name" class="form-control"></td>
+      </tr>
+      <tr>
+          <td><br></td>
+          <td><br></td>
+        </tr>
+      <tr>
+        <td>电话 :</td>
+        <td><input type="text" name="name" class="form-control"</td>
+      </tr>
+      <tr>
+          <td><br></td>
+          <td><br></td>
+          <tr>
+            <td>学校 :</td>
+            <td><input type="text" name="name" class="form-control"</td>
+          </tr>
+          <tr>
+              <td><br></td>
+              <td><br></td>
+              <tr>
+                <td>学院 :</td>
+                <td><input type="text" name="name" class="form-control"</td>
+              </tr>
+              <tr>
+                  <td><br></td>
+                  <td><br></td>
+        </tr>
+       <tr>
+        <td colspan="2"><br><button class="btn btn-primary" style="width: 200px;height: 50px;" id="que">确认修改</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
+	<script>
+		$(function(){
+			$("#que").click(function(){
+				alert("修改成功")
+			})
+		})
+	</script>
+</body>
+</html>

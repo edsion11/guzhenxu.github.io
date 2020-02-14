@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/* 导航栏 start */
+.Navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(206, 75, 0);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.Navigation li {
+    float: right;
+}
+.Navigation li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.Navigation li a:hover {
+    background-color: rgb(184, 173, 126);
+}
+.Navigation{
+    position: fixed;
+    top: 0;
+}
+/* 导航栏 end */
+/* 左导航栏 start */
+.LeftNavigation{
+    margin: 100px 0 0 0;
+}
+.LeftNavigation ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(88, 32, 0);
+    position: fixed;
+    left: 0;
+    width: 180px;
+    height: auto;
+    text-align: center;
+    color: rgb(255,255,255);
+}
+.LeftNavigation li{
+    /* height: 30px; */
+    cursor: pointer;
+}
+.LeftNavigation li :hover{
+    background-color: rgb(54, 20, 0);
+}
+#MenuOne,#MenuTwo,#MenuThree,#MenuFour,#DivOne{
+    display: none;
+}
+/* 左导航栏 end */

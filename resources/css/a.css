@@ -1,0 +1,115 @@
+/*基本设置*/
+@charset "utf-8";
+@font-face
+{
+	font-family:head-text-name;
+	src:url('../../pages/PoppinsLight.ttf');
+}
+
+*{
+	box-sizing: border-box;
+}
+body,div,p,h1{
+	margin: 0;
+	padding: 0;
+	font-family: head-text-name;
+}
+img{
+	border: 0;
+	display: block;
+	max-width: 100%;
+	vertical-align: middle;
+}
+.big
+{
+	width: 1366px;
+	margin: 0 auto;
+}
+.js-silder{
+	margin-top: 50px;
+	position: relative;	
+	min-width: 320px;
+}
+.silder-scroll{
+	width: 100%;
+	overflow: hidden;
+}
+.silder-main{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.silder-main-img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.silder-main-img img{
+	width: 100%;
+}
+.js-silder-ctrl{
+	width: 100%;
+	text-align: center;
+}
+.silder-ctrl-prev,
+.silder-ctrl-next{
+	position: absolute;
+	top: 0;
+	width: 8%;
+	height: 100%;
+	vertical-align: middle;
+	cursor: pointer;
+	color: #fff;
+	font-family: "宋体";
+	font-size: 52px;
+	font-weight: bolder;
+	text-shadow: #666 2px 2px 5px;
+	transition: 0.4s;
+}
+.silder-ctrl-prev{
+	left: 0;
+	text-align: left;
+}
+.silder-ctrl-next{
+	right: 0;
+	text-align: right;
+}
+.silder-ctrl-prev>span,
+.silder-ctrl-next>span{
+	position: absolute;
+	top: 50%;
+	margin-top: -40px;
+}
+.silder-ctrl-prev:hover,.silder-ctrl-next:hover
+{
+	margin-top: -5px;
+	font-size: 65px;
+}
+.silder-ctrl-prev>span{
+	left: 20px;
+}
+.silder-ctrl-next>span{
+	right: 20px;
+}
+.silder-ctrl-con{
+	display: inline-block;
+	width: 4%;
+	padding: 10px 0;
+	margin: 0 10px;
+	cursor: pointer;
+}
+.silder-ctrl-con>span{
+	display: block;
+	line-height: 0;
+	text-indent: -9999px;
+	overflow: hidden;
+	padding: 5px 0;
+	cursor: pointer;
+	background-color: #e4e4e4;
+	transition: 0.8s;
+	border-radius: 30px;
+}
+.silder-ctrl-con.active>span{
+	background-color: black;
+}

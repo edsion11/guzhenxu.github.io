@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>学生考试界面</title>
+<link rel="stylesheet" type="text/css" href="..\resources\css\pages.css">
+  <link rel="stylesheet" type="text/css" href="..\resources\css\basic.css">
+    <script src="..\resources\js\jquery.min.js"></script>
+    <link href="..\resources\css\bootstrap.min.css" rel="stylesheet">
+    <script src="..\resources\js\bootstrap.min.js"></script>
+</head>
+
+<style type="text/css">
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  font-family:
+    'HelveticaNeue-UltraLight', 
+    'Helvetica Neue UltraLight', 
+    Roboto, 
+    Arial, 
+    Sans-serif;
+  backface-visibility:hidden;
+  background:#f0f0f0;/*网页背景色 这个地方背景颜色不是白的*/
+}
+
+/*<!-- 上方为导航栏css 下方为学生界面css-->*/
+.topdiv{
+  height: 60px; 
+  /*border-bottom: thick dashed black;*/
+  background-color: #fff;
+  box-shadow: 0px 2px 0px 0px #888888;
+}
+.top1{
+  position: relative;
+  top: 3px;
+  left: 20px;
+  float: left;
+}
+.top2{
+  float: right;
+  position: relative;
+  top: 26px;
+  right: 10px;
+}
+.bigdiv{
+  position: relative;
+  float: right;
+  right:90px;
+  top: 2px;
+  height: auto;
+  width: 80%; 
+  background-color: #f0f0f0;/*右侧页面背景颜色*/
+}
+.big1{
+  width: 100%;
+  margin: auto;
+  height: 120px;
+  background-color: rgb(199,255,253);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.little{
+  float: right; 
+  margin-right: 100px;
+}
+.big1 img{
+  width: 50px; 
+  height: 50px; 
+}
+</style>
+
+<body>
+<div class="topdiv">
+  <div class="top1">
+    <img src="..\resources\img\logo.png" width="340px" height="54px">
+  </div>
+  <div class="top2">
+    xx同学，你好！<button class="btn btn-warning">退出登录</button>
+  </div>
+</div>
+<!-- 上方为导航栏 下方为学生界面-->
+<div>
+  <div style="float: right; margin-right: 20px;">
+      <a href="student_exam_index.html"><h4>退出考试</h4></a>
+  </div>
+</div>
+<h3 align="center">电工电子实验考试</h3>
+<div class="bigdiv">
+  <div class="big1">
+    <h3>试卷1</h3>
+    <div class="little">
+      <a href="student_exam_real.html"><img src="../resources/img/exam.png"></a>
+      <br>
+      <span>进入考试</span>
+    </div>
+    <p>试卷类型：2019学年 春季学期 第一次周末考试<span style="margin-left: 200px;">发布时间：2019.2.2</span></p><p>发布教师：橙子老师<span style="margin-left: 365px;">截止日期：2019.3.2</span></p><br><br>
+  </div>
+</div>
+<div class="bigdiv">
+  <div class="big1">
+    <h3>试卷2</h3>
+    <div class="little">
+      <a href="student_exam_real.html"><img src="../resources/img/exam.png"></a>
+      <br>
+      <span>进入考试</span>
+    </div>
+    <p>试卷类型：2018学年 春季学期 第一次周末考试<span style="margin-left: 200px;">发布时间：2018.2.2</span></p><p>发布教师：橙子老师<span style="margin-left: 365px;">截止日期：2018.3.2</span></p><br><br>
+  </div>
+</div>
+<div class="bigdiv">
+  <div class="big1">
+    <h3>试卷3</h3>
+    <div class="little">
+      <a href="student_exam_real.html"><img src="../resources/img/exam.png"></a>
+      <br>
+      <span>进入考试</span>
+    </div>
+   <p>试卷类型：2017学年 春季学期 第一次周末考试<span style="margin-left: 200px;">发布时间：2017.2.2</span></p><p>发布教师：橙子老师<span style="margin-left: 365px;">截止日期：2017.3.2</span></p><br><br>
+  </div>
+</div>
+<div class="bigdiv">
+  <div class="big1">
+    <h3>试卷4</h3>
+    <div class="little">
+      <a href="student_exam_real.html"><img src="../resources/img/exam.png"></a>
+      <br>
+      <span>进入考试</span>
+    </div>
+    <p>试卷类型：2016学年 春季学期 第一次周末考试<span style="margin-left: 200px;">发布时间：2016.2.2</span></p><p>发布教师：橙子老师<span style="margin-left: 365px;">截止日期：2016.3.2</span></p><br><br>
+  </div>
+</div>
+
+</body>
+</html>
