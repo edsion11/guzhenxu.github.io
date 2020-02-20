@@ -5,8 +5,8 @@ var aLi=document.querySelectorAll(".item");
 var list=document.getElementsByClassName("list")[0];
 var xiugai=document.getElementsByClassName("changebutton")[0];
 xiugai.addEventListener("click",function(){
-            alert("修改成功");}
-
+            alert("修改成功");
+        }
 var setLineBColor=function(){
     for(var i=0;i<aSpan.length;i++){
         aSpan[i].style.background="#ccc";
