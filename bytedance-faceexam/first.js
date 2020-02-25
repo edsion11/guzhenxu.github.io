@@ -86,3 +86,37 @@ console.log(longestvalid('((((((()))))))'))*/
 	}
 }*/
 /*------------------------------------------------------------------------------*/
+/*let arr=[10,20,30],
+obj={}
+function fn(x,y,z){
+	}
+fn.apply(obj,arr);
+console.log(x)*/
+// console.log(typeof(undefined))
+// console.log(typeof(null))
+// console.log(typeof(Array))
+// let arr=[10,20,30]
+// console.log(typeof(arr))
+// console.log(arr[0])
+// console.log(arr[0]==10)
+// console.log(arr[0]===10)
+// console.log(null===undefined)
+// console.log(null==undefined)
+// let myDate= new Date()
+// console.log(myDate)
+// var s="test"
+// var t=s.len
+// console.log(t)
+// let s="meituanwaimai", n=1 ,b=false
+// let S= new String(s)
+// let N=new Number(n)
+// let B=new Boolean(b)
+// console.log(S)
+// console.log(s)
+// console.log(N)
+// console.log(n)
+// console.log(B)
+// console.log(b)
+// console.log(S==s)
+// console.log(S===s)
+console.log(0===false)
