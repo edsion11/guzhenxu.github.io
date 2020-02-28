@@ -1,8 +1,6 @@
 /*---------------------------有效符号-----------------------------------------------------------------*/
 /**
  * 
- * @param {string} s
- * @return {boolean} 
  */
 /*-------------------------------第一道------------------------------/
 var isValid = function(s) {
@@ -119,4 +117,25 @@ console.log(x)*/
 // console.log(b)
 // console.log(S==s)
 // console.log(S===s)
-console.log(0===false)
+// console.log(0===false)
+//在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
+//请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
+function Find(target, array) {
+	var hang = array.length;
+	var lie = array[0].length;
+	for (var i = hang - 1, j = 0; i >= 0 && j < lie;) {
+		if (target == array[i][j]) {
+			return true;
+		};
+		if (target > array[i][j]) {
+			j++;
+			continue;
+		};
+		if (target < array[i][j]) {
+			i--;
+			continue;
+		};
+	}
+	return false;
+}
+console.log(Find(4, [1, 2, 3]))
