@@ -78,49 +78,11 @@ console.log(longestvalid('((((((()))))))'))*/
 //----------------------------------我是分界线------------------------------//
 //----------------剑指offer-39---------------------------------------------//
 //给定一个数组candidates和目标target，找出数组中所有数字和为target的组合----//
-/*function Findcombination(str,tar){
-	for(var i=0;i<str.length-1;i++){
-		
-	}
-}*/
-/*------------------------------------------------------------------------------*/
-/*let arr=[10,20,30],
-obj={}
-function fn(x,y,z){
-	}
-fn.apply(obj,arr);
-console.log(x)*/
-// console.log(typeof(undefined))
-// console.log(typeof(null))
-// console.log(typeof(Array))
-// let arr=[10,20,30]
-// console.log(typeof(arr))
-// console.log(arr[0])
-// console.log(arr[0]==10)
-// console.log(arr[0]===10)
-// console.log(null===undefined)
-// console.log(null==undefined)
-// let myDate= new Date()
-// console.log(myDate)
-// var s="test"
-// var t=s.len
-// console.log(t)
-// let s="meituanwaimai", n=1 ,b=false
-// let S= new String(s)
-// let N=new Number(n)
-// let B=new Boolean(b)
-// console.log(S)
-// console.log(s)
-// console.log(N)
-// console.log(n)
-// console.log(B)
-// console.log(b)
-// console.log(S==s)
-// console.log(S===s)
-// console.log(0===false)
+//
+// console.log(typeof(undefined))// console.log(typeof(null))// console.log(typeof(Array))// let arr=[10,20,30]// console.log(typeof(arr))// console.log(arr[0])// console.log(arr[0]==10)// console.log(arr[0]===10)// console.log(null===undefined)// console.log(null==undefined)// let myDate= new Date()// console.log(myDate)// var s="test"// var t=s.len// console.log(t)// let s="meituanwaimai", n=1 ,b=false// let S= new String(s)// let N=new Number(n)// let B=new Boolean(b)// console.log(S)// console.log(s)// console.log(N)// console.log(n)// console.log(B)// console.log(b)// console.log(S==s)// console.log(S===s) console.log(0===false)
 //在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
 //请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
-function Find(target, array) {
+/*function Find(target, array) {
 	var hang = array.length;
 	var lie = array[0].length;
 	for (var i = hang - 1, j = 0; i >= 0 && j < lie;) {
@@ -137,5 +99,4 @@ function Find(target, array) {
 		};
 	}
 	return false;
-}
-console.log(Find(4, [1, 2, 3]))
+}*/
