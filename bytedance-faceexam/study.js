@@ -1,4 +1,5 @@
 //--------------------------------study记录---------------------------------------------
+//-----------------------------------1.数组---------------------------------------
 // !(7 < 3) && console.log("hello")// console.log(!522)// console.log(Boolean(500))
 var arr = new Array(9, 12, 23, 14, 5, 100, 9, 2, 4, 1, 2, 9);
 //----------------------------------------------------------------------------
@@ -40,4 +41,46 @@ console.log(stack)*/
 // var x = arr.lastIndexOf(9)
 // console.log(x)
 //----------------------------------------------------------------------------
-//函数
+//-----------------函数------------------------------------------------
+//第一种直接函数申明：function name1(){}2.第二种函数表达式申明：var name2 = function () {}3.第三种Function构造函数申明：var name3 = new Function ()//
+//javascript解析器会把当前作用域的函数提前到 整个作用域的最前面。（表达式申明不会）（1.2区别）
+//形参的个数和实参的个数可以不相等----多余的形参不运算，缺失的当做undefined.number+undefined=NaN
+//arguments表示传入函数的所有对象--包含length属性，类似于数组，但不包括数组的所有属性。
+//匿名函数:没有命名的函数：比如绑定事件：document.click = function(){}。--比如定时器：setInterval(function(){},1000);--比如自调用函数(function(){alert("hello!")})();
+//回调函数，
+// function add(num1, num2) {// 	return num1 + num2;// }// function jian(num1, num2) {// 	return num1 - num2;// }// function chen(num1, num2) {// 	return num1 * num2;// }// function chu(num1, num2) {// 	return num1 / num2;// }// function cal(num1, num2, func) {// 	return func(num1, num2);// }// console.log(cal(1, 2, add))
+function Fibonaic(n) {
+	if (n == 1 || n == 0) return 1;
+	return Fibonaic(n - 1) + Fibonaic(n - 2);
+}
+
+function sum(n) {
+	if (n == 0) return 0
+	return n + sum(n - 1);
+}
+//onsole.log(sum(100))
+//1,3,6,10,15,21
+function name() {
+	//var na = "nihao";
+	na = "nihao";
+}
+name();
+//console.log(na)
+
+/*var n = 20;
+suc();
+function suc() {
+	console.log(n)
+	var n = 50;
+}*/
+f1();
+console.log(c);
+console.log(b);
+console.log(a);
+
+function f1() {
+	var a = b = c = 9;//a是局部变量，b,c是全局变量
+	console.log(a);
+	console.log(b);
+	console.log(c);
+}
