@@ -72,15 +72,63 @@ suc();
 function suc() {
 	console.log(n)
 	var n = 50;
-}*/
-f1();
-console.log(c);
-console.log(b);
-console.log(a);
+// }*/
 
-function f1() {
-	var a = b = c = 9;//a是局部变量，b,c是全局变量
-	console.log(a);
-	console.log(b);
-	console.log(c);
+// f1();// console.log(c);// console.log(b);// console.log(a);// function f1() {// 	var a = b = c = 9;//a是局部变量，b,c是全局变量// 	console.log(a);// 	console.log(b);// 	console.log(c);// }
+/*function person(params) {
+	this.name = params.name;
+	this.age = params.age;
+	this.xinbie = params.xinbie;
+	this.action = function (something) {
+		console.log(this.name + "在" + something);
+	}
 }
+var liming = new person({
+	name: "liming",
+	age: 18,
+	xinbie: "男",
+	something: "唱歌"
+})
+liming.action()*/
+/*function Dog(params) {
+	this._init(params);
+}
+Dog.prototype = {
+	_init: function (params) {
+		this.name = params.name;
+		this.age = params.age;
+		this.Boyfriends = params.Boyfriends;
+	},
+	eat: function () {
+		console.log(this.name + this.age)
+	}
+}
+var smalldog = new Dog({
+	name: "李明",
+	age: 18
+})
+smalldog.eat()*/
+//---------数组API方法-------------//
+//1.sory(),2.silce(),3.splice()4.Foreach()5.map()6.filter()7.every()8.some()
+var arr = [10, 9, 8, 7, 6, 5, 152, 88, -8]
+/*console.log(arr.sort(function (a, b) {
+	return a - b
+})) //升序排列数组
+console.log(arr.sort(function (a, b) {
+	return b - a
+}))*/ //降序排列数组（内部为冒泡排序）
+//console.log(arr.slice()) //包含首项不包含尾项，指定位置往后输出
+//console.log(arr.splice()) //1.删除(下标，个数)2.插入：(起始位置，删除的项数，插入的项)3.替换：()
+/*arr.forEach(function (value, index) {
+	console.log(index + ":" + value)
+});*/
+/*console.log(arr.map(function (value, index) {
+	return value * value
+}))*/ //映射
+//过滤filter()
+/*console.log(arr.filter(function (value, index) {
+	return value < 0
+}))*/
+/*console.log(arr.every(function (value, index) {
+	return value > 0 || value < 0
+}))*/
