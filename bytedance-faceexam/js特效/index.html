@@ -5,14 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js特效_1</title>
+    <script>
+        window.onload = function () {
+            var btn_1 = document.getElementById("btn");
+            btn_1.onclick = function () {
+                alert("look at me !");
+            }
+        }
+    </script>
 </head>
 
 <body>
     <h1 style="text-align: center;">the first test!</h1>
-    <script>
+    <button id="btn">touch me !</button>
+    <script type="text/html">
         //所有全局变量都是window的属性--
         var str = "你好！"
         console.log(window.str)
+    </script>
+    <script>
+        console.log(window.document)
     </script>
 </body>
 
