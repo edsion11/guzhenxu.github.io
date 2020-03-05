@@ -109,7 +109,7 @@ var smalldog = new Dog({
 })
 smalldog.eat()*/
 //---------数组API方法-------------//
-//1.sory(),2.silce(),3.splice()4.Foreach()5.map()6.filter()7.every()8.some()
+//1.sort(),2.silce(),3.splice()4.Foreach()5.map()6.filter()7.every()8.some()
 var arr = [10, 9, 8, 7, 6, 5, 152, 88, -8]
 /*console.log(arr.sort(function (a, b) {
 	return a - b
