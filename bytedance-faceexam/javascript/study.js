@@ -131,9 +131,17 @@ console.log(arr.sort(function (a, b) {
 }))*/
 /*console.log(arr.every(function (value, index) {
 	return value > 0 || value < 0
+<<<<<<< HEAD
+}))*/
+=======
 }))*/
 //.parentNode获取父节点(唯一)可以存在a.parentNode.parentNode.....
+<<<<<<< HEAD
 function Name1(){
     console.log("chrome linux !")
 }
     
+=======
+//chrome bad!!!//
+>>>>>>> d2851eefaf04e4efe95c6005affd6201dce51b1d
+>>>>>>> 9e64e578af46232313a873ca0a2988fabf26c0fa
