@@ -100,6 +100,49 @@ console.log(longestvalid('((((((()))))))'))*/
 	}
 	return false;
 }*/
+<<<<<<< HEAD
+/* function Person() {};
+var person1 = new Person();
+var person2 = new Person();
+Person.prototype.getName = function () {
+	return this.name;
+};
+Person.prototype.name = 'tom';
+person1.name = 'jerry';
+var name = person2.getName();
+console.log(name) */
+/* function Find(n, m, array) {
+	var days_all = 0
+	if (n > m) return 0;
+	if (n == m) return 1;
+	var days = 2;
+	for (;; days++) {
+
+	}
+
+
+}
+console.log(Find(10, 1, [1, 2, 5])) */
+/*小明要为n个人计划一次火星的探险，其中一个重要的任务是为每个参与者安排食物。仓库里面有m个能用一天的食物包裹，每个食物包裹有不同的类型ai。
+每个人每天必须用且只能用一个食物包裹。由于某些原因，在整个过程中，每个人只能用同一种类型的食物包裹，但是不同的人用的食物包裹可以不一样。
+给出人数以及食物包裹的情况，请你求出这趟探险最多可以持续多少天。 */
+/*var arr = [5, 5, 3, 1, 55, 3, 8, 3, 4, 9, 10, 55]
+var arr1 = arr.sort(function (a, b) {
+	return a - b
+})
+console.log(arr1);*/
+//--------------------------------------------------------------------------------------------------//
+function replaceSpace(str) {
+	return str.replace(/\s/g, '我是空格')
+}
+console.log(replaceSpace_2("we are the world !  "))
+
+function replaceSpace_2(str) {
+	var reg = new RegExp(" ", "g"); //正则表达式 //(regular expression)RegExp('patter',i__执行对大小写不敏感的匹配。g全局匹配__m__多行匹配)得到reg
+	var newstr = str.replace(reg, "我是空格");
+	return newstr;
+}
+=======
 //-------- replace the common exist string-------
 /*function replaceword(str1, str2) {
 	if (str2.length <= 0) return str1
@@ -112,7 +155,11 @@ console.log(longestvalid('((((((()))))))'))*/
 	return s1;
 }
 console.log(replaceword("they are students", "aeiou"))*/
+<<<<<<< HEAD
 function () {
 
 }
 console.()
+=======
+>>>>>>> 91ec8f502cdea7e4309ae29b6bf6b280a5cb67d2
+>>>>>>> d9a723826015c21ca8dbc934ffd80af5fe4f6df2
