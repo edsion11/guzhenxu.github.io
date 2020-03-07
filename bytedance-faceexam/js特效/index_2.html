@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>package_2</title>
+    <style>
+        *{
+          margin:0;
+          padding:0;
+          list-style: none;
+
+        }
+        #box{
+            width: 320px;
+            height: 80px;
+            border: 2px solid pink;
+            padding-top:370px;
+            margin:100px auto;
+            background: url("laugh4.svg") center no-repeat;        
+        }
+        img{
+            width: 80px;
+            height: 80px;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer ;
+             
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li id="li1"><img src="love2.svg"> </li>
+            <li id="li2"><img src="laugh1.svg"> </li>
+            <li id="li3"><img src="laugh2.svg"> </li>
+            <li id="li4"><img src="laugh3.svg"> </li>
+        </ul>    
+    </div>
+    <script>
+        window.onload = function(){
+            var ul01 = document.getElementById("li1")
+            var ul02 = document.getElementById("li2")
+            var ul03 = document.getElementById("li3")
+            var ul04 = document.getElementById("li4")
+            var box = document .getElementById("box")
+            ul01.onmouseover = function(){
+                  box.style.background = 'url("love2.svg") no-repeat center'
+            };
+            ul02.onmouseover = function(){
+                  box.style.background = 'url("laugh1.svg") no-repeat center'
+            };
+            ul03.onmouseover = function(){
+                  box.style.background = 'url("laugh2.svg") no-repeat center'
+            };
+            ul04.onmouseover = function(){
+                  box.style.background = 'url("laugh3.svg") no-repeat center'
+            };
+        }
+    </script>
+</body>
+</html>
