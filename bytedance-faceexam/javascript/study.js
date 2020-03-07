@@ -133,3 +133,4 @@ console.log(arr.sort(function (a, b) {
 	return value > 0 || value < 0
 }))*/
 //.parentNode获取父节点(唯一)可以存在a.parentNode.parentNode.....
+//chrome bad!!!//

@@ -112,3 +112,7 @@ console.log(longestvalid('((((((()))))))'))*/
 	return s1;
 }
 console.log(replaceword("they are students", "aeiou"))*/
+function () {
+
+}
+console.()
