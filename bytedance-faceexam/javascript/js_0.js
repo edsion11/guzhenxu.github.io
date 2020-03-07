@@ -93,10 +93,10 @@ console.log(longestvalid('((((((()))))))'))*/
 			j++;
 			continue;
 		};
-		if (target < array[i][j]) {
+		if (target < array[i][j]) {;
 			i--;
 			continue;
 		};
 	}
-	return false;
+	return false;()
 }*/

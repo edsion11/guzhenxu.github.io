@@ -131,4 +131,10 @@ console.log(arr.sort(function (a, b) {
 }))*/
 /*console.log(arr.every(function (value, index) {
 	return value > 0 || value < 0
+<<<<<<< HEAD
 }))*/
+=======
+}))*/
+//.parentNode获取父节点(唯一)可以存在a.parentNode.parentNode.....
+//chrome bad!!!//
+>>>>>>> d2851eefaf04e4efe95c6005affd6201dce51b1d

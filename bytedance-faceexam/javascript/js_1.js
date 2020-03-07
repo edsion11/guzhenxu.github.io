@@ -155,4 +155,16 @@ function replaceSpace_2(str) {
 	}
 	return s1;
 }
+<<<<<<< HEAD:bytedance-faceexam/javascript/js_1.js
 console.log(replaceword("they are students", "aeiou"))*/
+=======
+console.log(replaceword("they are students", "aeiou"))*/
+<<<<<<< HEAD
+function () {
+
+}
+console.()
+=======
+>>>>>>> 91ec8f502cdea7e4309ae29b6bf6b280a5cb67d2
+>>>>>>> d9a723826015c21ca8dbc934ffd80af5fe4f6df2
+>>>>>>> d2851eefaf04e4efe95c6005affd6201dce51b1d:bytedance-faceexam/fighting_1.js
