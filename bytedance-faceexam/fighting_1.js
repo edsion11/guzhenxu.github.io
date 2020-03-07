@@ -100,3 +100,15 @@ console.log(longestvalid('((((((()))))))'))*/
 	}
 	return false;
 }*/
+//-------- replace the common exist string-------
+/*function replaceword(str1, str2) {
+	if (str2.length <= 0) return str1
+	var s1 = str1;
+	for (var i = 0; i < str2.length; i++) {
+		var s2 = str2[i];
+		var reg = new RegExp(s2, "g")
+		var s1 = s1.replace(reg, "");
+	}
+	return s1;
+}
+console.log(replaceword("they are students", "aeiou"))*/

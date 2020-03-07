@@ -133,13 +133,3 @@ console.log(arr.sort(function (a, b) {
 	return value > 0 || value < 0
 }))*/
 //.parentNode获取父节点(唯一)可以存在a.parentNode.parentNode.....
-function replaceword(str1, str2) {
-	if (str2.length <= 0) return str1
-	for (var i = 0; i < str2.length; i++) {
-		var s2 = str2[i];
-		var reg = new RegExp(s2, "g")
-		var s1 = str1.replace(reg, "");
-	}
-	return s1;
-}
-console.log(replace())
