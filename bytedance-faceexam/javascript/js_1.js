@@ -100,7 +100,9 @@ console.log(longestvalid('((((((()))))))'))*/
 	}
 	return false;
 }*/
-<<<<<<< HEAD
+<<
+<<
+<< < HEAD
 /* function Person() {};
 var person1 = new Person();
 var person2 = new Person();
@@ -142,7 +144,6 @@ function replaceSpace_2(str) {
 	var newstr = str.replace(reg, "我是空格");
 	return newstr;
 }
-=======
 //-------- replace the common exist string-------
 /*function replaceword(str1, str2) {
 	if (str2.length <= 0) return str1
@@ -155,4 +156,3 @@ function replaceSpace_2(str) {
 	return s1;
 }
 console.log(replaceword("they are students", "aeiou"))*/
->>>>>>> 91ec8f502cdea7e4309ae29b6bf6b280a5cb67d2

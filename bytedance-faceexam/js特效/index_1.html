@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js特效_1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            width: 320px;
+            height: 300px;
+            border: 2px solid purple;
+            margin: 0 auto;
+        }
+
+        #box2 {
+            width: 320px;
+            height: 60px;
+            border: 2px solid pink;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;color: blue;" id="hc1">the first capture!</h1>
+    <nav>相册</nav>
+    <h2 id="hc2" style="text-align: center;color: pink; ">laugh1</h2>
+    <div id="box">
+        <img src="love1.svg" alt="" id="box1">
+    </div>
+    <div id="box2">
+        <ul id="ul1">
+            <a href="laugh1.svg" name="laugh1"><img src="laugh1.svg" style="width: 60px;height: 60px;"></a>
+            <a href="laugh2.svg" name="laugh2"><img src="laugh2.svg" style="width: 60px;height: 60px;"></a>
+            <a href="laugh3.svg" name="laugh3"><img src="laugh3.svg" style="width: 60px;height: 60px;"></a>
+            <a href="laugh4.svg" name="laugh4"><img src="laugh4.svg" style="width: 60px;height: 60px;"></a>
+            <a href="laugh5.svg" name="laugh5"><img src="laugh5.svg" style="width: 60px;height: 60px;"></a>
+
+        </ul>
+    </div>
+    <script>
+        //所有全局变量都是window的属性--
+        /*  var str = "你好！"
+         console.log(window.str) */
+        //.parentNode获取父节点(唯一)可以存在a.parentNode.parentNode.....
+        //sibling(兄弟节点),//next(下一个节点),previous(上一个节点)
+        //nextElementSibling()下一个兄弟节点
+        /* window.onload = function () {
+            var h1 = document.getElementById("hc1")
+            var h2 = hc1.nextElementSibling;
+            var im1 = h2.nextElementSibling;
+            im1.onclick = function () {
+                im1.nextElementSibling.style.display = "none"
+            }
+        } */
+        window.onload = function () {
+            var ul1 = document.getElementById("ul1")
+            console.log(ul1)
+            var im1 = ul1.getElementsByTagName("a")
+            var h2 = document.getElementById("hc2")
+            //console.log(h2)
+            box1 = document.getElementById("box1")
+            console.log(box1)
+            for (var i = 0; i < im1.length; i++) {
+                console.log(im1[i].href)
+                im1[i].onclick = function () {
+                    box1.src = this.href
+                    h2.innerHTML = this.name
+                    return false
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
