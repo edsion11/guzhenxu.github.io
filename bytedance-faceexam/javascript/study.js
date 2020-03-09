@@ -109,7 +109,8 @@ var smalldog = new Dog({
 })
 smalldog.eat()*/
 //---------数组API方法-------------//
-//1.sort(),2.silce(),3.splice()4.Foreach()5.map()6.filter()7.every()8.some()
+//1.sort()排序,2.silce()往后,3.splice()删除，插入，替换4.Foreach()遍历5.map()映射6.filter()
+//过滤7.every()全为true，返回true8.some()有一个为true，返回true遍历数组，返回布尔值，参数有item，index，arr(函数本身)
 var arr = [10, 9, 8, 7, 6, 5, 152, 88, -8]
 /*console.log(arr.sort(function (a, b) {
 	return a - b
@@ -134,35 +135,9 @@ console.log(arr.sort(function (a, b) {
 <<<<<<< HEAD
 }))*/
 //.parentNode获取父节点(唯一)可以存在a.parentNode.parentNode.....
-function fnc(arr){
-    for(var i = 0;i<arr.length;i++){
-        console.log(arr[i]);
-    }
+function fnc(arr) {
+	for (var i = 0; i < arr.length; i++) {
+		console.log(arr[i]);
+	}
 }
-fnc([1,2,3,4,5,67,8,9,20])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+fnc([1, 2, 3, 4, 5, 67, 8, 9, 20])
