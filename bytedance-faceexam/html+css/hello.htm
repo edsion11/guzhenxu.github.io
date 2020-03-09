@@ -5,10 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style type="text/css">
+        /*style标签内优先级第二，外部引入css文件优先级第三，浏览器缺省优先级第四*/
+    *{
+        margin :0;
+        padding: 0;
+    }
+     .box{
+         text-transform:capitalize;/*none,lowercase,uppercase,*/
+         text-decoration:line-through;/*none,underline,overline,line-through,blink(只在firefox中生效)*/
+         width:100%;
+         /*text-indent:-30%;*/
+         font-weight:20px;
+         font-size:20px;
+         /*padding-left:30%;*/
+         /*margin: 0 auto;*/
+         text-align:justify;/*属性还有left,right,center,justify*/
+         /*word-spacing: 50px;/*只可以调整字母间距，不能调整汉字*/
+         letter-spacing:10px;/*可以调整汉字间距*/
+       }
+      p{
+          background-color:#3454;
+          unicode-bidi:embed;
+          /*direction:rtl;/*规定文本流向，rtl：right to left--可继承*/
+          /*text-indent: -5em;*//*该属性可继承*/
+          /*padding-left: 0em;*/
+      }
+        h2.stricken {text-decoration: line-through;}
+        /*有stricken属性值的h2标签text-decoration属性会替换整体属性，而不是累积*/
+        /*whitespace：normal(默认值，自动忽略)，pre(空白会被浏览器保留。其行为方式类似 HTML 中的 <pre> 标签。),nowrap(文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。),(inherit(继承父元素))*/
+        h2 {text-decoration: underline overline;}
+    </style>
 </head>
 
 <body>
-
+    <div class="box">
+        <h2 style="color:#3443;text-align:center/*行内内联样式优先级最高*/">我是个二标题</h2>
+        <p>我是一个行内标签</p>
+        <p> i m a boss!</p>
+    </div>
+    <div class="box1"><div class="inner"></div></div>
+    <h2 class="stricken">我是有stricken属性的h2</h2>
+    <h2>我是没有stricken属性的h2</h2>
+    <pre>                      我是pre   </pre>
 </body>
 
 </html>
