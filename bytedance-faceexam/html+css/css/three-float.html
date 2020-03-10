@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 布局</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 400px;
+    height: 200px;
+}
+
+.left{
+    background-color: yellow; 
+    float: left;
+    height: 100%;
+    width:100px;
+}
+.right{
+    background-color: green; 
+    float: right;
+    height: 100%;
+    width:100px;
+}
+.middle{
+    background-color: red; 
+    margin-left: 100px;
+    margin-right: 100px;
+    height:100%;
+}
+.container::after{
+    content: '';
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+</style>
+<body>
+    <div class=container>       
+        <div class="left"></div>
+        <div class="right"></div><!--middle放中间不会生成三栏布局，float元素会把块元素空出来-->
+        <div class="middle"></div>
+        
+    </div>
+</body>
+</html>
