@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>导航栏</title>
+    <script src="/node_modules/bootstrap/dist/css/bootstrap.css"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background: radial-gradient(
+          200% 100% at bottom center,
+          #f7f7b6,
+          #e96f92,
+          #1b2947
+        );
+        background: radial-gradient(
+          220% 105% at top center,
+          #1b2947 10%,
+          #75517d 40%,
+          #e96f92 65%,
+          #f7f7b6
+        );
+        background-attachment: fixed;
+        overflow: hidden;
+      }
+      img {
+        width: 400px;
+        height: 200px;
+        float: left;
+        opacity: 0.1;
+        border-radius: 50%;
+      }
+      a:visited {
+        color: black;
+      }
+      li a strong:hover {
+        color: aquamarine;
+        background-color: white;
+      }
+      #nav li {
+        float: left;
+        list-style-type: none;
+      }
+      #nav li a {
+        margin-top: 20px;
+        color: #000000;
+        text-decoration: none;
+        padding-top: 4px;
+        display: block;
+        width: 97px;
+        height: 27px;
+        text-align: center;
+        /* background-color: #ececec; */
+        margin-left: 20px;
+      }
+      ul::after {
+        background-attachment: fixed;
+      }
+      #category {
+        width: 180px;
+        /*         border: 1px solid #e96f92; */
+        float: left;
+        margin-left: 40px;
+        margin-top: 20px;
+        position: relative;
+      }
+      #category h5 {
+        margin: 0px;
+        padding: 4px;
+        font-size: 15px;
+        font-weight: bold;
+        /*         border: 2px solid #26d3b6; */
+      }
+      #category h5 a {
+        margin-top: 20px;
+        color: #000000;
+        text-decoration: none;
+        /*  padding-top: 4px; */
+        position: relative;
+        text-align: center;
+        width: 97px;
+        height: 27px;
+        text-align: center;
+        /* margin-left: 20px; */
+      }
+      #category h5 a:hover {
+        color: aquamarine;
+      }
+      #content {
+        position: relative;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <img src="/bytedance-faceexam/js特效/logo.jpg" />
+      <ul id="nav">
+        <li>
+          <a href="#"><strong>首页</strong></a>
+        </li>
+        <li>
+          <a href="#"><strong>参考</strong></a>
+        </li>
+        <li>
+          <a href="#"><strong>论坛</strong></a>
+        </li>
+        <li>
+          <a href="#"><strong>blog</strong></a>
+        </li>
+        <li>
+          <a href="#"><strong>帮助</strong></a>
+        </li>
+        <li>
+          <a href="#"><strong>导航</strong></a>
+        </li>
+        <li>
+          <a href="#"><strong>联系我们</strong></a>
+        </li>
+      </ul>
+    </div>
+    <div id="category">
+      <h5><a href="#">————进阶</a></h5>
+      <h5><a href="#">————入门</a></h5>
+      <h5><a href="">————高级知识</a></h5>
+      <h5><a href="">————理论知识</a></h5>
+      <h5><a href="">————实战应用</a></h5>
+    </div>
+    <div class="input-group">
+      <input type="text" class="form-control" value="" style="opacity: 0.5;;" />
+      <div
+        style="background-color: aliceblue;opacity: 0.5; width: 800px;"
+      ></div>
+    </div>
+  </body>
+</html>

@@ -151,7 +151,7 @@ fnc*/
 例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1。
 NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。*/
 //1.直接排序2.二分法(待添加)
-function minarr(array){
+/* function minarr(array){
    for(var i = 1;i<array.length;i++){
        for(var j = 0;j<array.length-i;j++){
            if(array[j]>array[j+1]){
@@ -163,22 +163,28 @@ function minarr(array){
    }
     return array[0];
 }
-console.log(minarr([3,4,5,1,2]))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(minarr([3,4,5,1,2])) */
+//输入一个整数，求他的二进制编码，以及101的个数和第一个101的下标
+/* function fnc(num) {
+	if (num == 0) return 0;
+	var arr1 = [];
+	var i = 0;
+	while (!num % 2 == 0) {
+		arr1[i] = Math.trunc(num % 2);
+		num = Math.trunc(num / 2);
+		i++;
+	}
+	var arr2 = arr1.reverse()
+	var count = 0;
+	var xiabiao = [];
+	var n = 0;
+	for (var j = 0; j < arr2.length - 2; j++) {
+		if (arr2[j] == 1 && arr2[j + 1] == 0 && arr2[j + 2] == 1) {
+			count++;
+			xiabiao[n++] = j;
+		}
+	}
+	console.log(xiabiao[0])
+	return count
+}
+console.log(fnc(84)) */
