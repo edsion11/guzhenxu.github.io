@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../list.js"></script>
+    <style>
+      a:hover {
+        color: aqua;
+        background-color: gray;
+      }
+      a:visited {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a id="1" href="#"></a></li>
+      <li><a id="2" href="#"></a></li>
+      <li><a id="3" href="#"></a></li>
+      <li><a id="4" href="#"></a></li>
+      <li><a id="5" href="#"></a></li>
+      <li><a id="6" href="#"></a></li>
+      <li><a id="7" href="#"></a></li>
+      <li><a id="8" href="#"></a></li>
+      <li><a id="9" href="#"></a></li>
+      <li><a id="10" href="#"></a></li>
+      <li><a id="11" href="#"></a></li>
+      <li><a id="12" href="#"></a></li>
+      <li><a id="13" href="#"></a></li>
+      <li><a id="14" href="#"></a></li>
+      <li><a id="15" href="#"></a></li>
+      <li><a id="16" href="#"></a></li>
+      <li><a id="17" href="#"></a></li>
+      <li><a id="18" href="#"></a></li>
+      <li><a id="19" href="#"></a></li>
+      <li><a id="20" href="#"></a></li>
+    </ul>
+    <script>
+      function read(name) {
+        let xhr = new XMLHttpRequest(),
+          okStatus = document.location.protocol === 'file:' ? 0 : 200
+        xhr.open('GET', name, false)
+        xhr.overrideMimeType('text/html;charset=utf-8') //默认为utf-8
+        xhr.send(null)
+        return xhr.status === okStatus ? xhr.responseText : null
+      }
+      var movies = read('movie.txt').split('\n')
+      //console.log(movies)
+      function creatArr(file) {
+        var arr = read('movie.txt').split('\n')
+        for (let i = 0; i < arr.length; i++) {
+          arr[i] = arr[i].trim()
+        }
+        return arr
+      }
+      var movielist = new list()
+      for (var i = 0; i < movies.length; i++) {
+        movielist.append(movies[i])
+      }
+      console.log(movielist.dataStore[0])
+      document.getElementById('1').innerHTML = movielist.dataStore[0]
+      document.getElementById('2').innerHTML = movielist.dataStore[1]
+      document.getElementById('3').innerHTML = movielist.dataStore[2]
+      document.getElementById('4').innerHTML = movielist.dataStore[3]
+      document.getElementById('5').innerHTML = movielist.dataStore[4]
+      document.getElementById('6').innerHTML = movielist.dataStore[5]
+      document.getElementById('7').innerHTML = movielist.dataStore[6]
+      document.getElementById('8').innerHTML = movielist.dataStore[7]
+      document.getElementById('9').innerHTML = movielist.dataStore[8]
+      document.getElementById('10').innerHTML = movielist.dataStore[9]
+      document.getElementById('11').innerHTML = movielist.dataStore[10]
+      document.getElementById('12').innerHTML = movielist.dataStore[11]
+      document.getElementById('13').innerHTML = movielist.dataStore[12]
+      document.getElementById('14').innerHTML = movielist.dataStore[13]
+      document.getElementById('15').innerHTML = movielist.dataStore[14]
+      document.getElementById('16').innerHTML = movielist.dataStore[15]
+      document.getElementById('17').innerHTML = movielist.dataStore[16]
+      document.getElementById('18').innerHTML = movielist.dataStore[17]
+      document.getElementById('19').innerHTML = movielist.dataStore[18]
+      document.getElementById('20').innerHTML = movielist.dataStore[19]
+    </script>
+  </body>
+</html>
