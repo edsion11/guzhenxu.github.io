@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <style>
-      * {
+      body {
         margin: 0;
         padding: 0;
         background: radial-gradient(
@@ -30,6 +30,9 @@
         );
         background-attachment: fixed;
         overflow: hidden;
+      }
+      body {
+        z-index: 1;
       }
       img {
         width: 400px;
@@ -73,30 +76,21 @@
         position: relative;
       }
       #category h5 {
-        margin: 0px;
-        padding: 4px;
+        margin-top: 10px;
+        padding: 2px;
         font-size: 15px;
         font-weight: bold;
         /*         border: 2px solid #26d3b6; */
       }
       #category h5 a {
-        margin-top: 20px;
         color: #000000;
         text-decoration: none;
         /*  padding-top: 4px; */
         position: relative;
-        text-align: center;
-        width: 97px;
-        height: 27px;
-        text-align: center;
         /* margin-left: 20px; */
       }
       #category h5 a:hover {
         color: aquamarine;
-      }
-      #content {
-        position: relative;
-        background-color: #fff;
       }
     </style>
   </head>
@@ -134,7 +128,13 @@
       <h5><a href="">————理论知识</a></h5>
       <h5><a href="">————实战应用</a></h5>
     </div>
-    <div class="input-group">
+    <div
+      class="input-group"
+      style="width: 800px;background-color: gray;height: 800px;position: relative;margin-top: 15px;margin-left: 420px;z-index: 0;border: 0.5px solid black;opacity: 0.2;border-radius: 10px;"
+    >
+      <div style="position: relative;margin:10px;">
+        啊是你的哦纳斯哦的啊看哦什么奥斯曼哦爱上你的奥isdnoasn哦你奥数难道哦纳斯哦你
+      </div>
       <input type="text" class="form-control" value="" style="opacity: 0.5;;" />
       <div
         style="background-color: aliceblue;opacity: 0.5; width: 800px;"
