@@ -100,9 +100,6 @@ console.log(longestvalid('((((((()))))))'))*/
 	}
 	return false;
 }*/
-<<
-<<
-<< < HEAD
 /* function Person() {};
 var person1 = new Person();
 var person2 = new Person();
@@ -140,7 +137,7 @@ function replaceSpace(str) {
 console.log(replaceSpace_2("we are the world !  "))
 
 function replaceSpace_2(str) {
-	var reg = new RegExp(" ", "g"); //正则表达式 //(regular expression)RegExp('patter',i__执行对大小写不敏感的匹配。g全局匹配__m__多行匹配)得到reg
+	var reg = new RegExp(" ", "g"); //正则表达式 //(regular expression)RegExp('patter',i_执行对大小写不敏感的匹配。g全局匹配__m__多行匹配)得到reg
 	var newstr = str.replace(reg, "我是空格");
 	return newstr;
 }
@@ -155,5 +152,4 @@ function replaceSpace_2(str) {
 	}
 	return s1;
 }
-<<<<<<< HEAD:bytedance-faceexam/javascript/js_1.js
 console.log(replaceword("they are students", "aeiou"))*/

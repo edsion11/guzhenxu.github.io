@@ -1,7 +1,7 @@
 //--------------------------------study记录---------------------------------------------
 //-----------------------------------1.数组---------------------------------------
 // !(7 < 3) && console.log("hello")// console.log(!522)// console.log(Boolean(500))
-var arr = new Array(9, 12, 23, 14, 5, 100, 9, 2, 4, 1, 2, 9);
+var arr = new Array(9, 12, 23, 14, 5, 100, 9, 2, 4, 1, 2, 9)
 //----------------------------------------------------------------------------
 // join(separator)方法：将数组的元素组起一个字符串，以separator为分隔符，省略的话为默认","
 // var arr1 = arr.join("|");
@@ -36,7 +36,7 @@ console.log(stack)*/
 //----------------------------------------------------------------------------
 //indexOf(), lastIndexOf()方法
 //indexOf()是查某个指定的字符串在字符串首次出现的位置（索引值）（从左往右） （使用全等操作符）
-//lastIndexOf()是从右向左查某个指定的字符串在字符串中最后一次出现的位置（从右往左）	
+//lastIndexOf()是从右向左查某个指定的字符串在字符串中最后一次出现的位置（从右往左）
 //找不到返回"-1"
 // var x = arr.lastIndexOf(9)
 // console.log(x)
@@ -111,37 +111,42 @@ smalldog.eat()*/
 //---------数组API方法-------------//
 //1.sort()排序,2.silce()往后,3.splice()删除，插入，替换4.Foreach()遍历5.map()映射6.filter()
 //过滤7.every()全为true，返回true8.some()有一个为true，返回true遍历数组，返回布尔值，参数有item，index，arr(函数本身)
-var arr = [10, 9, 8, 7, 6, 5, 152, 88, -8]
-/*console.log(arr.sort(function (a, b) {
-	return a - b
-})) //升序排列数组
-console.log(arr.sort(function (a, b) {
-	return b - a
-}))*/ //降序排列数组（内部为冒泡排序）
-//console.log(arr.slice()) //包含首项不包含尾项，指定位置往后输出
-//console.log(arr.splice()) //1.删除(下标，个数)2.插入：(起始位置，删除的项数，插入的项)3.替换：()
-/*arr.forEach(function (value, index) {
-	console.log(index + ":" + value)
-});*/
-/*console.log(arr.map(function (value, index) {
-	return value * value
-}))*/ //映射
-//过滤filter()
-/*console.log(arr.filter(function (value, index) {
-	return value < 0
-}))*/
-/*console.log(arr.every(function (value, index) {
-	return value > 0 || value < 0
-<<<<<<< HEAD
-}))*/
-//.parentNode获取父节点(唯一)可以存在a.parentNode.parentNode.....
+var arr = [
+	10,
+	9,
+	8,
+	7,
+	6,
+	5,
+	152,
+	88,
+	-8
+]
 /*function fnc(arr) {
 	for (var i = 0; i < arr.length; i++) {
 		console.log(arr[i]);
 	}
 }
 fnc*/
-//-------替换字符串中的空格
+/*arr.forEach(function (value, index) {
+	console.log(index + ":" + value)
+});*/
+/*console.log(arr.every(function (value, index) {
+	return value > 0 || value < 0
+<<<<<<< HEAD
+}))*/
+/*console.log(arr.filter(function (value, index) {
+	return value < 0
+}))*/
+/*console.log(arr.map(function (value, index) {
+	return value * value
+}))*/ //降序排列数组（内部为冒泡排序） //映射 //console.log(arr.slice()) //包含首项不包含尾项，指定位置往后输出 //过滤filter() //console.log(arr.splice()) //1.删除(下标，个数)2.插入：(起始位置，删除的项数，插入的项)3.替换：() //.parentNode获取父节点(唯一)可以存在a.parentNode.parentNode..... //-------替换字符串中的空格
+/*console.log(arr.sort(function (a, b) {
+	return a - b
+})) //升序排列数组
+console.log(arr.sort(function (a, b) {
+	return b - a
+}))*/
 /*function replaceSpace(str)
 {
     return  resStr = str.replace(/ /g, "%20");
@@ -164,6 +169,7 @@ NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。*/
     return array[0];
 }
 console.log(minarr([3,4,5,1,2])) */
+//------------------------------------------------------------------
 //输入一个整数，求他的二进制编码，以及101的个数和第一个101的下标
 /* function fnc(num) {
 	if (num == 0) return 0;
@@ -188,3 +194,49 @@ console.log(minarr([3,4,5,1,2])) */
 	return count
 }
 console.log(fnc(84)) */
+//--------------------------------------------------
+//leetcode-5----最长回文子字符串-----------------------
+//遍历法----超时---555555555555
+function longestPalindrome(s) {
+	if (s.split('').join('') == s.split('').reverse().join('')) return s
+	var sta = new Array() //栈push和shift
+	for (var i = 0; i < s.length; i++) {
+		sta.push(s[i])
+	}
+	var maxlen = 0
+	var max = ""
+	for (let j = 0; j < s.length; j++) {
+		for (let i = 0; i < s.length - 1; i++) {
+			//console.log( (s.slice(j, i + 2))
+			var arr1 = s.slice(j, i + 2).split('')
+			var arrm = arr1.join('')
+			var arrn = arr1.reverse().join('')
+			if (arrm == arrn && arrm.length > maxlen) {
+				maxlen = arrm.length
+				max = arrm
+			}
+		}
+	}
+	return max
+}
+console.log(longestPalindrome('civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth'))
+
+/* 	function Stack() {
+		this.dataStore = []
+		this.push = push;
+		this.pop = pop;
+		this.top = 0
+		this.length = length
+	}
+
+	function length() {
+		return this.top
+	}
+
+	function push(element) {
+		this.dataStore[this.top++] = element
+	}
+
+	function pop(element) {
+		return this.dataStore[--this.top];
+	} */
