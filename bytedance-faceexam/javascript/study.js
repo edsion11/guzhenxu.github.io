@@ -122,55 +122,6 @@ var arr = [
 	88,
 	-8
 ]
-/*function fnc(arr) {
-	for (var i = 0; i < arr.length; i++) {
-		console.log(arr[i]);
-	}
-}
-fnc*/
-/*arr.forEach(function (value, index) {
-	console.log(index + ":" + value)
-});*/
-/*console.log(arr.every(function (value, index) {
-	return value > 0 || value < 0
-<<<<<<< HEAD
-}))*/
-/*console.log(arr.filter(function (value, index) {
-	return value < 0
-}))*/
-/*console.log(arr.map(function (value, index) {
-	return value * value
-}))*/ //降序排列数组（内部为冒泡排序） //映射 //console.log(arr.slice()) //包含首项不包含尾项，指定位置往后输出 //过滤filter() //console.log(arr.splice()) //1.删除(下标，个数)2.插入：(起始位置，删除的项数，插入的项)3.替换：() //.parentNode获取父节点(唯一)可以存在a.parentNode.parentNode..... //-------替换字符串中的空格
-/*console.log(arr.sort(function (a, b) {
-	return a - b
-})) //升序排列数组
-console.log(arr.sort(function (a, b) {
-	return b - a
-}))*/
-/*function replaceSpace(str)
-{
-    return  resStr = str.replace(/ /g, "%20");
-}*/
-/*把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。
-输入一个非递减排序的数组的一个旋转，输出旋转数组的最小元素。
-例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1。
-NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。*/
-//1.直接排序2.二分法(待添加)
-/* function minarr(array){
-   for(var i = 1;i<array.length;i++){
-       for(var j = 0;j<array.length-i;j++){
-           if(array[j]>array[j+1]){
-               var temp = array[j];
-               array[j] = array[j+1];
-               array[j+1] = temp 
-           }
-       }
-   }
-    return array[0];
-}
-console.log(minarr([3,4,5,1,2])) */
-//------------------------------------------------------------------
-//输入一个整数，求他的二进制编码，以及101的个数和第一个101的下标
 /* function fnc(num) {
 	if (num == 0) return 0;
 	var arr1 = [];
@@ -194,17 +145,71 @@ console.log(minarr([3,4,5,1,2])) */
 	return count
 }
 console.log(fnc(84)) */
-//--------------------------------------------------
-//leetcode-5----最长回文子字符串-----------------------
-//遍历法----超时---555555555555
-function longestPalindrome(s) {
-	if (s.split('').join('') == s.split('').reverse().join('')) return s
+/* function minarr(array){
+   for(var i = 1;i<array.length;i++){
+       for(var j = 0;j<array.length-i;j++){
+           if(array[j]>array[j+1]){
+               var temp = array[j];
+               array[j] = array[j+1];
+               array[j+1] = temp 
+           }
+       }
+   }
+    return array[0];
+}
+console.log(minarr([3,4,5,1,2])) */
+/*把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。
+输入一个非递减排序的数组的一个旋转，输出旋转数组的最小元素。
+例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1。
+NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。*/
+/*function replaceSpace(str)
+{
+    return  resStr = str.replace(/ /g, "%20");
+}*/
+/*console.log(arr.sort(function (a, b) {
+	return a - b
+})) //升序排列数组
+console.log(arr.sort(function (a, b) {
+	return b - a
+}))*/ //降序排列数组（内部为冒泡排序） //映射 //console.log(arr.slice()) //包含首项不包含尾项，指定位置往后输出 //过滤filter() //console.log(arr.splice()) //1.删除(下标，个数)2.插入：(起始位置，删除的项数，插入的项)3.替换：() //.parentNode获取父节点(唯一)可以存在a.parentNode.parentNode..... //-------替换字符串中的空格 //1.直接排序2.二分法(待添加) //------------------------------------------------------------------ //输入一个整数，求他的二进制编码，以及101的个数和第一个101的下标 //-------------------------------------------------- //leetcode-5----最长回文子字符串----------------------- //遍历法----超时---555555555555
+/*function fnc(arr) {
+	for (var i = 0; i < arr.length; i++) {
+		console.log(arr[i]);
+	}
+}
+fnc*/
+/*arr.forEach(function (value, index) {
+	console.log(index + ":" + value)
+});*/
+/*console.log(arr.every(function (value, index) {
+	return value > 0 || value < 0
+}))*/
+/*console.log(arr.filter(function (value, index) {
+	return value < 0
+}))*/
+/*console.log(arr.map(function (value, index) {
+	return value * value
+}))*/
+/*******************************************************************************************************************************
+------------------------------------------------求最长回文子串----------------------------------------------------------------------------------*/
+//
+/* function longestPalindrome(
+	s
+) {
+	if (
+		s.split('').join('') ==
+		s
+		.split('')
+		.reverse()
+		.join('')
+	)
+		return s
 	var sta = new Array() //栈push和shift
 	for (var i = 0; i < s.length; i++) {
 		sta.push(s[i])
 	}
 	var maxlen = 0
-	var max = ""
+	var max = ''
 	for (let j = 0; j < s.length; j++) {
 		for (let i = 0; i < s.length - 1; i++) {
 			//console.log( (s.slice(j, i + 2))
@@ -218,25 +223,32 @@ function longestPalindrome(s) {
 		}
 	}
 	return max
+} */
+//console.log(longestPalindrome('civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth'))
+/*******************************************************************************************************************************
+----------------------------------------------------------------------------------------------------------------------------------*/
+//这是一道大题目--
+//--1.创建一个长度为5的数组
+//--2.生成一个2~32的随机数
+//--3.将随机数插入到数组arr内，如果数组内存在相同的数，重新生成随机数插入
+//--4.输出长度为5，内容不重复的数组
+let arr1 = []
+//创建全局数组arr1
+function fnc(s) {
+	if (s > 0) {
+		//生成2~32的随机数
+		parseInt(Math.random() * 31 + 2, 10) //生成指定区间的随机数parseInt(Math.random()*(max-min+1)+min,10);Math.floor(Math.random()*(max-min+1)+min);
+		var rand = Math.floor(Math.random() * 31 + 2)
+		//判断是否存在相同的数
+		var boolean = arr1.every(function (item) {
+			return item != rand
+		})
+		if (boolean == true) {
+			arr1.push(rand)
+			return fnc(--s)
+		} else {
+			return fnc(s)
+		}
+	} else return arr1
 }
-console.log(longestPalindrome('civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth'))
-
-/* 	function Stack() {
-		this.dataStore = []
-		this.push = push;
-		this.pop = pop;
-		this.top = 0
-		this.length = length
-	}
-
-	function length() {
-		return this.top
-	}
-
-	function push(element) {
-		this.dataStore[this.top++] = element
-	}
-
-	function pop(element) {
-		return this.dataStore[--this.top];
-	} */
+console.log(fnc(5))
