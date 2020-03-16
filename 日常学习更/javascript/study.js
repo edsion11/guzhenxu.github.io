@@ -1,5 +1,5 @@
 //--------------------------------study记录---------------------------------------------
-//-----------------------------------1.数组---------------------------------------
+//?-----------------------------------1.数组---------------------------------------
 // !(7 < 3) && console.log("hello")// console.log(!522)// console.log(Boolean(500))
 var arr = new Array(9, 12, 23, 14, 5, 100, 9, 2, 4, 1, 2, 9)
 //----------------------------------------------------------------------------
@@ -40,8 +40,9 @@ console.log(stack)*/
 //?找不到返回"-1"
 //? var x = arr.lastIndexOf(9)
 //? console.log(x)
-//?----------------------------------------------------------------------------
-//?!-----------------函数------------------------------------------------
+//!---------------------------------------------------------------------------------------------------------------------------------------
+//?------------------------------------------------函数----------------------------------------------------------------------------------------
+//?!-----------------------------------------------------------------------------------------------------------------------------------
 //!注意：关于函数作用域的声明提前，在函数内一开始先声明所有局部变量，但到var的时候才正式赋值。初始值为undefined,到声明语句时赋值。
 //!第一种直接函数申明：function name1(){}2.第二种函数表达式申明：var name2 = function () {}3.第三种Function构造函数申明：var name3 = new Function ()//
 //!!javascript解析器会把当前作用域的函数提前到 整个作用域的最前面。（表达式申明不会）（1.2区别）
@@ -131,7 +132,7 @@ function isArrayLike(o) {
 	else
 		return false
 }
-
+//*实参类型
 function sum(a) {
 	if (isArrayLike(a)) {
 		var total = 0
@@ -148,7 +149,87 @@ function sum(a) {
 		console.log("sum(): argument must be array-Like")
 }
 //*console.log(sum([1, 2, 3, 4, 'hello'])) 
-//!---------数组API方法-------------//
+//!自定义函数属性
+function facJieChen(n) {
+	if (isFinite(n) && n > 0 && n == Math.round(n)) { //有限的正整数
+		if (!(n in facJieChen)) //判断是否有缓存结果
+			facJieChen[n] = n * facJieChen(n - 1) //计算缓存结果
+		return facJieChen[n] //返回缓存结果
+	} else return NaN //输入有误
+}
+facJieChen[1] = 1
+//*console.log(facJieChen(3))
+//!-------------------------作为命名空间的函数--------------------------//
+var extend = (function () { //将这个函数的返回值赋值给extend
+	//在修复它之前，首先检查是否存在bug
+	for (var p in {
+			toString: null
+		}) {
+		///console.log(p)
+		//如果代码执行到这里，那么for/in循环会正确工作并返回一个简单版本的extend()函数
+		return function extend(o) {
+			for (var i = 1; i < arguments.length; i++) {
+				var source = arguments[i];
+				for (var prop in source) o[prop] = source[prop];
+			}
+			return o;
+		};
+	}
+	//如果代码执行到这里，说明for/in循环不会枚举测试对象的toString属性
+	//因此返回另一个版本的extend()函数，这个函数显式测试
+	//Object.prototype中的不可枚举属性
+	return function patched_extend(o) {
+		for (var i = 1; i < arguments.length; i++) {
+			var source = arguments[i];
+			//复制所有的可枚举属性
+			for (var prop in source) o[prop] = source[prop];
+			//现在检查特殊属性
+			for (var j = 0; j < protoprops.length; j++) {
+				prop = protoprops[j];
+				if (source.hasOwnProperty(prop)) o[prop] = source[prop]
+			}
+		}
+		return o;
+	};
+	var protoprops = ["toString", "valueOf", "constructor", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumrable", "toLocaleString"];
+
+}());
+
+var h = {
+	x: 1,
+	y: 2,
+	z: 3
+};
+//*var s = extend(h);
+//*console.log(s); //Object { x=1,  y=2,  z=3}
+//*console.log(s.x); //1
+//!--------------------------------------------------闭包-----------------------------------------------//
+var scope = "global scope"
+
+function f() {
+	var scope = "local scope"
+
+	function f1() {
+		console.log(scope)
+		return scope //*console.log(this.scope)-->>undefined
+	}
+	return f1
+}
+//console.log(f())
+//f()()
+f = null
+var count = 55
+var uniqueInteger = (function () {
+	var count = 0;
+
+	return function () {
+		console.log(++count)
+	}
+}())
+uniqueInteger()
+//!------------------------------------------------------------------------------------------------------------------------------------------------------
+//!------------------------------------------------数组API方法----------------------------------------------------------------------------//
+//!------------------------------------------------------------------------------------------------------------------------------------------------------
 //1.sort()排序,2.slice()往后输出,3.splice()删除，插入，替换4.Foreach()遍历5.map()映射6.filter()
 //!indexOf和lastIndexOf(),搜寻整个数组中给定值的元素，没有返回-1，lasto从后往前遍历，indexOf从前往后
 //!reduce和reduceRight--使用给定的函数将数组元素进行组合，生成单个值，第一个参数是执行函数，第二个是初始值
@@ -235,68 +316,7 @@ fnc*/
 /*console.log(arr.map(function (value, index) {
 	return value * value
 }))*/
-/*******************************************************************************************************************************
-------------------------------------------------求最长回文子串----------------------------------------------------------------------------------*/
-//
-/* function longestPalindrome(
-	s
-) {
-	if (
-		s.split('').join('') ==
-		s
-		.split('')
-		.reverse()
-		.join('')
-	)
-		return s
-	var sta = new Array() //栈push和shift
-	for (var i = 0; i < s.length; i++) {
-		sta.push(s[i])
-	}
-	var maxlen = 0
-	var max = ''
-	for (let j = 0; j < s.length; j++) {
-		for (let i = 0; i < s.length - 1; i++) {
-			console.log( (s.slice(j, i + 2))
-			var arr1 = s.slice(j, i + 2).split('')
-			var arrm = arr1.join('')
-			var arrn = arr1.reverse().join('')
-			if (arrm == arrn && arrm.length > maxlen) {
-				maxlen = arrm.length
-				max = arrm
-			}
-		}
-	}
-	return max
-} */
-//console.log(longestPalindrome('civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth'))
-/*******************************************************************************************************************************
-----------------------------------------------------------------------------------------------------------------------------------*/
-//这是一道大题目--
-//--1.创建一个长度为5的数组
-//--2.生成一个2~32的随机数
-//--3.将随机数插入到数组arr内，如果数组内存在相同的数，重新生成随机数插入
-//--4.输出长度为5，内容不重复的数组
-let arr1 = []
-//创建全局数组arr1
-function fnc(s) {
-	if (s > 0) {
-		//生成2~32的随机数
-		parseInt(Math.random() * 31 + 2, 10) //生成指定区间的随机数parseInt(Math.random()*(max-min+1)+min,10);Math.floor(Math.random()*(max-min+1)+min);
-		var rand = Math.floor(Math.random() * 31 + 2)
-		//判断是否存在相同的数
-		var boolean = arr1.every(function (item) {
-			return item != rand
-		})
-		if (boolean == true) {
-			arr1.push(rand)
-			return fnc(--s)
-		} else {
-			return fnc(s)
-		}
-	} else return arr1
-}
-//console.log(fnc(5))
+
 var n = 120
 //console.log(n.toString(2)) //?转换进制，参数为其他进制数
 var n1 = 1234.5678

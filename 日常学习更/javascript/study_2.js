@@ -52,3 +52,65 @@ function fanzhuan(num) {
 
 }
 console.log(fanzhuan(-12223))
+/*******************************************************************************************************************************
+------------------------------------------------求最长回文子串----------------------------------------------------------------------------------*/
+//
+/* function longestPalindrome(
+	s
+) {
+	if (
+		s.split('').join('') ==
+		s
+		.split('')
+		.reverse()
+		.join('')
+	)
+		return s
+	var sta = new Array() //栈push和shift
+	for (var i = 0; i < s.length; i++) {
+		sta.push(s[i])
+	}
+	var maxlen = 0
+	var max = ''
+	for (let j = 0; j < s.length; j++) {
+		for (let i = 0; i < s.length - 1; i++) {
+			console.log( (s.slice(j, i + 2))
+			var arr1 = s.slice(j, i + 2).split('')
+			var arrm = arr1.join('')
+			var arrn = arr1.reverse().join('')
+			if (arrm == arrn && arrm.length > maxlen) {
+				maxlen = arrm.length
+				max = arrm
+			}
+		}
+	}
+	return max
+} */
+//console.log(longestPalindrome('civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth'))
+/*******************************************************************************************************************************
+----------------------------------------------------------------------------------------------------------------------------------*/
+//这是一道大题目--
+//--1.创建一个长度为5的数组
+//--2.生成一个2~32的随机数
+//--3.将随机数插入到数组arr内，如果数组内存在相同的数，重新生成随机数插入
+//--4.输出长度为5，内容不重复的数组
+let arr1 = []
+//创建全局数组arr1
+function fnc(s) {
+    if (s > 0) {
+        //生成2~32的随机数
+        parseInt(Math.random() * 31 + 2, 10) //生成指定区间的随机数parseInt(Math.random()*(max-min+1)+min,10);Math.floor(Math.random()*(max-min+1)+min);
+        var rand = Math.floor(Math.random() * 31 + 2)
+        //判断是否存在相同的数
+        var boolean = arr1.every(function (item) {
+            return item != rand
+        })
+        if (boolean == true) {
+            arr1.push(rand)
+            return fnc(--s)
+        } else {
+            return fnc(s)
+        }
+    } else return arr1
+}
+//console.log(fnc(5))

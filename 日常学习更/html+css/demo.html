@@ -1,60 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-  <title>map_china</title>
-  <style>
-  #map_china{
-     height:800px;
-     
-  }
-  .blue{
-       color:#9966cc;
-  }
-  </style>
- </head>
- <body>
-  <h1 align="center" class="blue">中国灾情实时播报</h1>
-  <div id="map_china"></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0.rc2/echarts.js"> </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://codepen.io/thirtyjin/pen/Epxxoe"></script>
-  <script src="https://codepen.io/thirtyjin/pen/OwJJON"></script>
-  <script src="https://duxcharts.oss-cn-beijing.aliyuncs.com/js/china.js"></script>
-<script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Generator" content="EditPlus®" />
+    <meta name="Author" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <title>map_china</title>
+    <style>
+      #map_china {
+        height: 800px;
+      }
+      .blue {
+        color: #9966cc;
+      }
+    </style>
+  </head>
+  <h1>
+    <h1 align="center" class="blue">中国灾情实时播报</h1>
+    <div id="map_china"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0.rc2/echarts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://codepen.io/thirtyjin/pen/Epxxoe"></script>
+    <script src="https://codepen.io/thirtyjin/pen/OwJJON"></script>
+    <script src="https://duxcharts.oss-cn-beijing.aliyuncs.com/js/china.js"></script>
+    <script>
       // 基于准备好的dom，初始化echarts实例
 
-      if (document.getElementById("map_china")) {
+      if (document.getElementById('map_china')) {
         var option = {
           title: {
-            text: "地域分布"
+            text: '地域分布'
           },
           tooltip: {
-            trigger: "item"
+            trigger: 'item'
           },
           legend: {
             show: false
           },
           visualMap: {
-            type: "continuous",
+            type: 'continuous',
             min: 0,
             max: 1000,
-            text: ["多", "少"],
+            text: ['多', '少'],
             realtime: false,
             itemWidth: 16,
             itemHeight: 120,
             left: 0,
             calculable: true,
             inRange: {
-              color: ["#60ACFC", "rgba(159,205,253,0.70)"],
+              color: ['#60ACFC', 'rgba(159,205,253,0.70)'],
               symbolSize: [100, 100]
             },
             outOfRange: {
-              color: ["#EEEEEE"],
+              color: ['#EEEEEE'],
               symbolSize: [100, 100]
             }
           },
@@ -63,185 +62,184 @@
           },
           series: [
             {
-              name: "人数",
-              type: "map",
-              mapType: "china",
-              roam: "move",
-              mapValueCalculation: "sum",
+              name: '人数',
+              type: 'map',
+              mapType: 'china',
+              roam: 'move',
+              mapValueCalculation: 'sum',
               zoom: 1,
               selectedMode: false,
               showLegendSymbol: false,
               label: {
                 normal: {
                   textStyle: {
-                    color: "#666"
+                    color: '#666'
                   }
                 },
                 emphasis: {
                   textStyle: {
-                    color: "#234EA5"
+                    color: '#234EA5'
                   }
                 }
               },
               itemStyle: {
                 normal: {
-                  areaColor: "#EEEEEE",
-                  borderColor: "#FFFFFF"
+                  areaColor: '#EEEEEE',
+                  borderColor: '#FFFFFF'
                 },
                 emphasis: {
-                  areaColor: "#E5F39B"
+                  areaColor: '#E5F39B'
                 }
               },
               data: [
                 {
-                  name: "北京",
+                  name: '北京',
                   value: 41
                 },
                 {
-                  name: "天津",
+                  name: '天津',
                   value: 20
                 },
                 {
-                  name: "上海",
+                  name: '上海',
                   value: 33
                 },
                 {
-                  name: "重庆",
+                  name: '重庆',
                   value: 57
                 },
                 {
-                  name: "河北",
+                  name: '河北',
                   value: 8
                 },
                 {
-                  name: "河南",
+                  name: '河南',
                   value: 32
                 },
                 {
-                  name: "云南",
+                  name: '云南',
                   value: 11
                 },
                 {
-                  name: "辽宁",
+                  name: '辽宁',
                   value: 17
                 },
                 {
-                  name: "黑龙江",
+                  name: '黑龙江',
                   value: 9
                 },
                 {
-                  name: "湖南",
+                  name: '湖南',
                   value: 43
                 },
                 {
-                  name: "安徽",
+                  name: '安徽',
                   value: 39
                 },
                 {
-                  name: "山东",
+                  name: '山东',
                   value: 27
                 },
                 {
-                  name: "新疆",
+                  name: '新疆',
                   value: 3
                 },
                 {
-                  name: "江苏",
+                  name: '江苏',
                   value: 18
                 },
                 {
-                  name: "浙江",
+                  name: '浙江',
                   value: 62
                 },
                 {
-                  name: "江西",
+                  name: '江西',
                   value: 18
                 },
                 {
-                  name: "湖北",
+                  name: '湖北',
                   value: 761
                 },
                 {
-                  name: "广西",
+                  name: '广西',
                   value: 23
                 },
                 {
-                  name: "甘肃",
+                  name: '甘肃',
                   value: 4
                 },
                 {
-                  name: "山西",
+                  name: '山西',
                   value: 6
                 },
                 {
-                  name: "内蒙古",
+                  name: '内蒙古',
                   value: 7
                 },
                 {
-                  name: "陕西",
+                  name: '陕西',
                   value: 15
                 },
                 {
-                  name: "吉林",
+                  name: '吉林',
                   value: 4
                 },
                 {
-                  name: "福建",
+                  name: '福建',
                   value: 18
                 },
                 {
-                  name: "贵州",
+                  name: '贵州',
                   value: 4
                 },
                 {
-                  name: "广东",
+                  name: '广东',
                   value: 78
                 },
                 {
-                  name: "青海",
+                  name: '青海',
                   value: 1
                 },
                 {
-                  name: "西藏",
+                  name: '西藏',
                   value: 0
                 },
                 {
-                  name: "四川",
+                  name: '四川',
                   value: 28
                 },
                 {
-                  name: "宁夏",
-                  value:3
-                },
-                {
-                  name: "海南",
-                  value: 19
-                },
-                {
-                  name: "台湾",
+                  name: '宁夏',
                   value: 3
                 },
                 {
-                  name: "香港",
+                  name: '海南',
+                  value: 19
+                },
+                {
+                  name: '台湾',
+                  value: 3
+                },
+                {
+                  name: '香港',
                   value: 5
                 },
                 {
-                  name: "澳门",
+                  name: '澳门',
                   value: 2
                 }
               ]
             }
           ]
-        };
-        var MapChina = echarts.init(document.getElementById("map_china"));
-        MapChina.setOption(option);
+        }
+        var MapChina = echarts.init(document.getElementById('map_china'))
+        MapChina.setOption(option)
 
         // 浏览器窗口缩放，图表自动重绘适应浏览器窗口，codepen 中使用。
         window.onresize = function() {
-          MapChina.resize();
-        };
+          MapChina.resize()
+        }
       }
     </script>
-
- </body>
+  </h1>
 </html>
