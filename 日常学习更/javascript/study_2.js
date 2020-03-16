@@ -2,8 +2,8 @@ var grades = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
-];
-var arr = [];
+]
+var arr = []
 for (var i = 0; i < grades.length; i++) {
     for (var j = 0; j < grades[i].length; j++) {
         // console.log(grades[i][j]
@@ -12,46 +12,63 @@ for (var i = 0; i < grades.length; i++) {
 }
 //console.log(arr)
 //console.log(grades[1].unshift())
-var people = ["i", "am", "a", "student"]
+var people = ['i', 'am', 'a', 'student']
 //console.log(people.reverse())
 function boy() {
-    this.x = [];
-    this.add = add;
+    this.x = []
+    this.add = add
 }
 
 function add(data) {
-    this.x.push(data);
+    this.x.push(data)
 }
-var liming = new boy;
+var liming = new boy()
 liming.add(18)
 //console.log(liming.x)
-var num = 18;
+//var num = 18
 //console.log(num.toString())
 function list() {
     this.data = []
 }
-var li = new list;
-li.data[0] = 1;
+var li = new list()
+li.data[0] = 1
 li.data[1] = 2
 //console.log(li.data)
 //判断回文
 function ishuiwen(num) {
     if (num < 0) return false
-    return num.toString() == num.toString().split("").reverse().join("");
+    return (
+        num.toString() ==
+        num
+        .toString()
+        .split('')
+        .reverse()
+        .join('')
+    )
 }
 //console.log(ishuiwen(-12321))
 //反转整数
 function fanzhuan(num) {
     if (num >= 0) {
-        return num.toString().split("").reverse().join("")
+        return num
+            .toString()
+            .split('')
+            .reverse()
+            .join('')
     } else {
         var s = num.toString().substr(1, num.toString().length)
         //console.log(s)
-        return "-" + s.toString().split("").reverse().join("")
+        return (
+            '-' +
+            s
+            .toString()
+            .split('')
+            .reverse()
+            .join('')
+        )
     }
-
 }
-console.log(fanzhuan(-12223))
+//*console.log(fanzhuan(-12223))
 /*******************************************************************************************************************************
 ------------------------------------------------求最长回文子串----------------------------------------------------------------------------------*/
 //
@@ -114,3 +131,33 @@ function fnc(s) {
     } else return arr1
 }
 //console.log(fnc(5))
+//*爷爷十分聪明，对于n*m的乘法表，只要度度熊给出一个数k，爷爷就能立刻告诉度度熊乘法表中元素按照不减顺序排列之后，第k个元素是多少。
+//*你能重复这个游戏吗？
+var number = function findk(n, m, k) {
+    var arr = []
+    var i = 0
+    var j = 0
+    var max = n * m
+    for (var a = 0; a < max; a++) {
+        arr[a] = (i + 1) * (j + 1)
+        j++
+        if (j == m) {
+            i++
+            j = 0
+        }
+    }
+    arr.sort(function (a, b) {
+        return a - b
+    })
+    console.log(arr)
+    return arr[k - 1]
+}
+//console.log(number(2, 3, 4))
+
+function getNthFibonacci(count) {
+    if (count == 1 || count == 2) {
+        return 1
+    }
+    return getNthFibonacci(count - 1) + getNthFibonacci(count - 2)
+}
+console.log(getNthFibonacci(8))

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <title>绘制三角形</title>
+    <style>
+      .triangle {
+        width: 0;
+        height: 0;
+        border-width: 200px;
+        border-style: solid;
+        border-color: transparent transparent transparent red; /*底边在左边的三角形*/
+        border-color: transparent transparent red; /*底边在下边的三角形*/
+        border-color: transparent red transparent transparent; /*底边在右边的三角形*/
+        border-color: red transparent transparent transparent; /*底边在上边的三角形*/
+      }
+      .none {
+        width: 300px;
+        height: 300px;
+        display: none;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="triangle"></div>
+    <div class="none"></div>
+    <script>
+      $('div:hidden')
+        .css('background', 'red')
+        .show(1000)
+    </script>
+  </body>
+</html>

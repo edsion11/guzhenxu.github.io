@@ -353,3 +353,30 @@ console.log(ss) */
 	console.log(j) //j=0
 }
 test() */
+/* var a = '123'
+var b = new String(a)
+console.log(typeof (b))
+function outFn() {
+	this.num = 10
+
+	function inFn() {
+			var num = 100
+			console.log(this.num) //输出的结果________
+			console.log(num) //输出的结果________
+	}
+	return inFn
+}
+outFn()()
+var scope = "global scope"
+
+function f() {
+	var scope = "local scope"
+
+	function f1() {
+			console.log(this.scope)
+			console.log(scope)
+			return scope //*console.log(this.scope)-->>undefined
+	}
+	return f1
+}
+f()() */
