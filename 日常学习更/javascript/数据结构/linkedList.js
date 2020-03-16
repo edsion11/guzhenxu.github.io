@@ -15,7 +15,7 @@ function LList() {
   this.findLast = findLast //?双向链表寻找最后一个节点--用来反序显示链表
   this.displayReverse = displayReverse
 }
-
+//!反序输出
 function displayReverse() {
   //!var last=this.head
   var last = this.findLast()
@@ -24,7 +24,7 @@ function displayReverse() {
     last = last.previous
   }
 }
-
+//!找出最后一个节点
 function findLast() {
   var currNode = this.head
   while (currNode.next != null) {
@@ -142,7 +142,9 @@ city.insert("secondway", "firstway")
 city.insert("thirdway", "secondway")
 city.insert("noway", "thirdway")
 city.insert("faraway", "noway")
-city.display()
+city.insert("firstway", "faraway")
+city.insert("faraway", "firstway")
+//!city.display()
 //*剑指offer链表题目
 //!1.输入一个链表，按链表从尾到头的顺序返回一个ArrayList。//
 function printListFromTailToHead(head) {
