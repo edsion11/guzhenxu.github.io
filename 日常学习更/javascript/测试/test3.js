@@ -12,4 +12,5 @@ assert.equal(person.getName(), 'Tom');
 assert.equal(Object.keys(person).every((key) => key === 'getName'), true)
 class Person {
 // 请实现私有属性name
+
 }
