@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>study5</title>
+    <style>
+      input:focus {
+        border: 1px solid black;
+        background-color: #888888;
+      }
+      a:hover {
+        color: aquamarine;
+      }
+      a:visited {
+        color: coral;
+      }
+      a:target {
+        background-color: antiquewhite;
+      }
+      #info:target {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" />
+    <a href="#info">这是一个链接</a>
+    <p id="info">我是一个段落</p>
+    <div id="testdiv">
+      <img
+        src="http://pic.netbian.com/uploads/allimg/191207/171141-1575709901e5e0.jpg"
+        width="350px"
+        height="200px"
+      />
+    </div>
+    <script>
+      window.onload = function() {
+        var para = document.createElement('p')
+        var text1 = document.createTextNode('This is')
+        para.appendChild(text1)
+        var emphasis = document.createElement('em')
+        var text2 = document.createTextNode('my')
+        emphasis.appendChild(text2)
+        para.appendChild(emphasis)
+        var text3 = document.createTextNode('content.')
+        para.appendChild(text3)
+        var testdiv = document.getElementById('testdiv')
+        testdiv.appendChild(para)
+        var input = document.getElementsByTagName('input')[0]
+        insertBefore(testdiv, input)
+        function insertAfter(newElement, targetElement) {
+          //原生js写个向后插入节点的函数，
+          var parent = targetElement.parentNode
+          if (parent.lastChild == targetElement) {
+            parent.appendChild(newElement)
+          } else {
+            parent.insertBefore(newElement, targetElement.nextSibling)
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
