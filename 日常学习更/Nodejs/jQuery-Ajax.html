@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<style id="hello"></style>
+</head>
+ 
+<body>
+    <span>获取的内容如下:</span>
+    <div id="lblResponse"></div>
+    <button id="btn">请点击</button>
+    <script id="nihao"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#btn").click(function(){
+            $.ajax({
+                url: 'http://127.0.0.1:8088/',
+                dataType: "jsonp",//jsonp是针对于get的跨域解决办法
+                data: '{"data": "TEST"}',
+                type: 'POST',
+                jsonpCallback: 'callback', // 这与POST不相关
+                success: function (data) {
+                    console.log(data);
+                    // var ret = jQuery.parseJSON(data);//jQuery.parseJSON()  函数用于将格式完好的JSON字符串转为与之对应的JavaScript对象。
+                    //所谓"格式完好"，就是要求指定的字符串必须符合严格的JSON格式，例如：属性名称必须加双引号、字符串值也必须用双引号。
+                    $('#hello').html(data.style);
+                    $('#lblResponse').html(data.content);
+                    $('#nihao').html(data.javascript);
+                    // console.log('Success!')
+                },
+                error: function (xhr, status, error) {
+                    console.log('Error: ' + error.message);
+                    $('#lblResponse').html('Error connecting to the server.');
+                },
+            });
+        });
+    });
+    </script>
+</body>
+</html>
