@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: linear-gradient(
+          180deg,
+          rgb(236, 135, 206),
+          rgb(241, 29, 146)
+        );
+        background-attachment: fixed;
+        overflow: hidden;
+      }
+      .window {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .ball {
+        position: absolute;
+        display: inline-flex;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: linear-gradient(
+          90deg,
+          rgb(141, 235, 203),
+          rgb(143, 211, 250)
+        );
+        animation: change 2s infinite linear;
+        box-shadow: beige;
+      }
+      @keyframes change {
+        from {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.5);
+        }
+        to {
+          background-color: #82c5fc;
+        }
+      }
+      @keyframes changeColor {
+        from {
+          background: linear-gradient(
+            90deg,
+            rgb(141, 235, 203),
+            rgb(143, 211, 250)
+          );
+        }
+        to {
+          background: linear-gradient(90deg, #ffccff, #ff00ff);
+        }
+      }
+      .ball:hover {
+        background: linear-gradient(90deg, #ffccff, #ff00ff);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="window"></div>
+    <script>
+      const box = document.getElementsByClassName('window')
+      const box0 = box[0]
+      box[0].addEventListener('click', function (event) {
+        let e = event || window.event
+        let x1 = e.clientX - e.target.offsetLeft
+        let x = e.clientX
+        const div = document.createElement('div')
+        div.className = 'ball'
+        div.style.left = e.clientX - 50 + 'px'
+        div.style.top = e.clientY - 50 + 'px'
+        box0.appendChild(div)
+      })
+    </script>
+  </body>
+</html>

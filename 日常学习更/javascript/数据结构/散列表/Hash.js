@@ -1,4 +1,4 @@
-//*散列是一种常用的数据存储技术，桑拿列后的数据可以快速地插入或取用，散列使用的数据结构叫做散列表。
+//*散列是一种常用的数据存储技术，散列后的数据可以快速地插入或取用，散列使用的数据结构叫做散列表。
 //*在散列表上插入，删除和取用数据非常快
 //!查找效率低下->二叉树查找是最好的选择
 //*使用散列表存储数据时，通过一个散列函数将键映射为一个数字，这个数字的范围是0-散列表的长度
@@ -30,7 +30,7 @@ function betterHash(string) {
   if (total < 0) {
     total += this.table.length - 1
   }
-  console.log(string + "value:" + "->" + total)
+  console.log(string + 'value:' + '->' + total)
   return parseInt(total)
 }
 //?将字符串中每个字符的ASCII码值相加似乎是一个不错的散列函数，散列值就是ASCII码值的和除以数字长度的余数
@@ -39,7 +39,7 @@ function simpleHash(data) {
   for (let i = 0; i < data.length; ++i) {
     total += data.charCodeAt(i)
   }
-  console.log("Hash value:" + data + "->" + total)
+  console.log('Hash value:' + data + '->' + total)
   return total % this.table.length
 }
 
@@ -64,11 +64,19 @@ function showDistro() {
   var n = 0
   for (let i = 0; i < this.table.length; ++i) {
     if (this.table[i] != undefined) {
-      console.log(i + ":" + this.table[i])
+      console.log(i + ':' + this.table[i])
     }
   }
 }
-var someNames = ["David", "Jennifer", "Donnie", "Raymond", "faker", "Clayton", "Jonathan"]
+var someNames = [
+  'David',
+  'Jennifer',
+  'Donnie',
+  'Raymond',
+  'faker',
+  'Clayton',
+  'Jonathan',
+]
 var hTable = new HashTable()
 for (let i = 0; i < 7; i++) {
   hTable.put(someNames[i])
@@ -76,13 +84,15 @@ for (let i = 0; i < 7; i++) {
 //hTable.showDistro()
 //!-----------------------------散列化整形键---------------------------------------------------//
 
-function getRandomInt(min, max) { //*随机一个指定区间的数
+function getRandomInt(min, max) {
+  //*随机一个指定区间的数
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-function getStuData(arr) { //?生成学生的数据，里面的循环来形成学生的ID，紧跟在循环后面生成一个随机的成绩。
+function getStuData(arr) {
+  //?生成学生的数据，里面的循环来形成学生的ID，紧跟在循环后面生成一个随机的成绩。
   for (var i = 0; i < arr.length; ++i) {
-    var num = ""
+    var num = ''
     for (var j = 1; j <= 9; ++j) {
       num += Math.floor(Math.random() * 10)
     }
