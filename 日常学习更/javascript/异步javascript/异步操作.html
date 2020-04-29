@@ -6,6 +6,33 @@
     <title>异步操作html</title>
   </head>
   <body>
-    <script src="回调函数.js"></script>
+    <script src="手写Promise.js"></script>
+    <script>
+      const p = new myPromise((resolve, reject) => {
+        //resolve(1)
+        //reject(2)
+        setTimeout(() => {
+          //resolve(1)
+          reject(2)
+          console.log('此时执行完setTimmeout()的reject()')
+        }, 100)
+      })
+      p.then(
+        (value) => {
+          console.log('onResolved1()', value)
+        },
+        (reason) => {
+          console.log('onRejected1()', reason)
+        }
+      )
+      p.then(
+        (value) => {
+          console.log('onResolved2()', value)
+        },
+        (reason) => {
+          console.log('onRejected2()', reason)
+        }
+      )
+    </script>
   </body>
 </html>
