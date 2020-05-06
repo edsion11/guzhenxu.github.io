@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>宏队列与微队列</title>
+  </head>
+  <body>
+    <script>
+      //微队列优先级高
+      setTimeout(() => {
+        //立即进入宏队列
+        console.log('timeout1')
+        Promise.resolve(2).then((value) => {
+          console.log('setTimeout的Promise1' + value)
+        })
+      }, 0)
+      setTimeout(() => {
+        //立即进入宏队列
+        console.log('timeout2')
+        /*
+        每次准备取出一个宏队列的任务时，都会先执行所有的微任务
+        */
+        Promise.resolve(2).then((value) => {
+          console.log('setTimeout的Promise2' + value)
+        })
+      }, 0)
+      Promise.resolve(1).then((value) => {
+        //立即进入微队列
+        console.log('Promise onResolved' + value)
+      })
+      //Promise onResolved 1.
+      //timeout
+    </script>
+  </body>
+</html>
