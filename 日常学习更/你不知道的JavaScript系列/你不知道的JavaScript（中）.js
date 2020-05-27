@@ -133,7 +133,6 @@ console.log(person.name)
 
 delete person.name;
 console.log(person.name)*/
-
 /*
 var scope = "global scope";
 function checkscope(){
@@ -160,3 +159,48 @@ data[0]();//0
 data[1]();//1
 data[2]();//2
 */
+/*
+function Car(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+}
+
+const car1 = new Car('Eagle', 'Talon TSi', 1993);
+console.log(car1)
+console.log(car1.__proto__)
+*/
+// new 的实现
+function Otaku (name, age) {
+    this.name = name;
+    this.age = age;
+    this.habit = 'Games';
+    return {
+        name:name,
+        age:age,
+    }
+}
+function myNew() {
+    let obj = {};
+    let Constructor1 = [].shift.call(arguments);
+    obj.__proto__ = Constructor1.prototype;
+    let ret = Constructor1.apply(obj,arguments);
+    return typeof obj==='object' ? ret : obj
+}
+// 因为缺乏锻炼的缘故，身体强度让人担忧
+Otaku.prototype.strength = 60;
+
+Otaku.prototype.sayYourName = function () {
+    console.log('I am ' + this.name);
+}
+
+let person = new Otaku('Kevin', '18');
+let person1 = myNew(Otaku,"周宇",'18')
+console.log(person.name,person.age,person.habit,person.strength)
+//person.sayYourName(); // I am Kevin
+console.log(person1.name,person.age,person1.habit,person1.strength)
+console.log(Otaku.prototype)
+console.log(person1.__proto__)
+//person1.sayYourName()
+
+
