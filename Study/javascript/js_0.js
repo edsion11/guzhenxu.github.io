@@ -98,3 +98,16 @@ console.log(longestvalid('((((((()))))))'))*/
 	}
 	return false;()
 }*/
+//剑指offer-->>
+// 请实现一个函数，将一个字符串中的每个空格替换成 “%20” 。例如，当字符串为 We Are Happy 。则经过替换之后的字符串为  We%20Are%20Happy 。
+function SpaceReplace(str) {
+    let arr = str.split('');
+    arr.forEach((item,index,arr)=>{
+        if(item===' '){
+            arr[index] = "%20"
+        }
+    })
+    let result = arr.join('')
+    console.log(result)
+}
+SpaceReplace("We  are the world!")

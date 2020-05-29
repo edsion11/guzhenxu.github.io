@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型链和原型</title>
+</head>
+<body>
+<script>
+/*    function A() {
+    }
+    A.prototype.n=1;
+    let b = new A();
+    A.prototype = {
+        n:2,
+        m:3
+    }
+    let c = new A()
+    console.log(b.n,b.m)
+    console.log(c.n,c.m)*/
+    /*let F = function () {
+
+    }
+    Object.prototype.a = function () {
+        console.log('a()')
+    }
+    Function.prototype.b = function () {
+        console.log('b()')
+    }
+
+    let f = new F();
+    f.a();
+    //f.b();
+    F.a();
+ F.b();*/
+let f = function(){};
+let ff = new f()
+console.log(Function.prototype.__proto__==Object.prototype)
+console.log(f.__proto__==Function.prototype)
+console.log(ff.__proto__==f.prototype)
+//ff ->> f ->> Function ->> Object ->> null
+</script>
+</body>
+</html>
