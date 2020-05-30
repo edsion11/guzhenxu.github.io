@@ -171,7 +171,7 @@ console.log(car1)
 console.log(car1.__proto__)
 */
 // new 的实现
-function Otaku (name, age) {
+/*function Otaku (name, age) {
     this.name = name;
     this.age = age;
     this.habit = 'Games';
@@ -200,7 +200,174 @@ console.log(person.name,person.age,person.habit,person.strength)
 //person.sayYourName(); // I am Kevin
 console.log(person1.name,person.age,person1.habit,person1.strength)
 console.log(Otaku.prototype)
-console.log(person1.__proto__)
+console.log(person1.__proto__)*/
 //person1.sayYourName()
+//
+//如果向Promise传递一个非Promise,非thenable的立即值，就会得到用这个值填充的Promise,如果传递Promise,就会返回同一个Promise.
+/*let p1 = new Promise((resolve,reject)=>{
+    resolve(42)
+})
+let p2 = Promise.resolve(42)
+p1.then(((value,reason)=>{
+    console.log(value)
+}))
+let p3 = Promise.resolve(p1)
+p3.then((value,reason)=>{
+    console.log(value)
+})*/
+//如果传递一个非thenable的值，会尝试展开
+/*
+let p1 = {
+    then:function (cb) {
+        cb(42)
+    }
+}
+p1.then((value)=>{
+    console.log(value)
+})
+*/
+/*var p = {
+    then:function (cb,errcb) {
+        cb(42);
+        errcb("error!")
+    }
+}
+p.then((value)=>{
+    console.log(value)},
+    (reason)=>{
+    console.log(reason)
+})*/
+//42
+//error!
+//
+/*function foo() {
+    setTimeout(function () {
+        ab.cd()
+    },1000)
+}
+try {
+    foo()
+}
+catch (err) {
 
+}*/
+
+
+//error-first回调风格
+/*function foo(cb) {
+    setTimeout(function () {
+        try{
+            let  x  = function(){
+                console.log("123")
+                return 234
+            }
+            cb(null,x)
+        }
+        catch (err) {
+            cb(err)
+        }
+    },1000)
+}
+foo(function (err,val) {
+    if(err){
+        console.error(err)
+    }else{
+        console.log(val())
+    }
+})*/
+//Promise采用的是分离回调风格（split-callback）
+//all([...]) race([...])变体->>
+//none([...])
+//any([...])
+//first([...])
+//last([...])
+let p1 = Promise.resolve(1)
+let p2 = Promise.resolve(2)
+let p3 = Promise.resolve(3)
+let p4 = Promise.resolve(4)
+let p5 = Promise.reject("Promise.error:"+5)
+//let p6 = Promise.reject("Promise.error:"+6)
+//let p7 = Promise.reject("Promise.error:"+7)
+/*Promise.all([p5,p1,p2,p3,p4]).then(v=>{
+    console.log(v)},(s)=>{
+    console.log(s)
+})
+
+if(!Promise.All){
+    Promise.All = function (prs) {
+        return new Promise((resolve,reject)=> {
+            let sum = 0;
+            let PromiseArr = new Array(prs.length)
+            prs.forEach((pr, index) => {
+                Promise.resolve(pr).then((value) => {
+                    PromiseArr[index] = value;
+                    sum++
+                    if (sum === prs.length) {
+                        resolve(PromiseArr)
+                    }
+                }, (reason) => {
+                    reject(reason)
+                })
+            })
+        })
+    }
+}
+Promise.All([p5,p1,p2,p3,p4]).then(v=>{
+    console.log(v)},(s)=>{
+    console.log(s)
+})*/
+//none([...])
+//这个模式类似与all([...]),不过完成和拒绝的情况呼唤了。所有的Promise都要被拒绝，即拒绝转换为完成值
+if(!Promise.none){
+    Promise.none  = function (prs) {
+        return new Promise((resolve,reject)=>{
+            let sum= 0;
+            let PromiseArr=  new Array(prs.length)
+            prs.forEach((pr,index)=>{
+                Promise.resolve(pr).then((value)=>{
+                    console.log("这是resolve的值")
+                    reject(value)
+                },(reason)=>{
+                    PromiseArr[index] = reason
+                    sum++
+                    if(sum===prs.length){
+                        reject(PromiseArr)
+                    }
+                })
+            })
+        })
+    }
+}
+/*Promise.none([p5,p6,p1,p7]).then((value)=>{
+    console.log(value)
+},(reason)=>{
+    console.log(reason)
+})*/
+//any([...])这个模式与all([..])类似，但是忽略拒绝，只需要完成一个而不是全部
+if(!Promise.any){
+    Promise.any = function (prs) {
+        return new Promise((resolve,reject)=>{
+            prs.forEach((pr)=>{
+                Promise.resolve(pr).then(
+                    (value)=>{
+                        resolve(value)
+                    },(reason)=>{
+                    }
+                )
+                })
+        })
+    }
+}
+Promise.any([p5,p1,p2]).then((value)=>{
+    console.log(value)
+})
+//first只要第一个完成，就会忽略后面的任何完成和拒绝
+if(!Promise.first){
+    Promise.first = function (prs) {
+        prs.forEach(function (pr) {
+            Promise.resolve(pr).then(resolve)
+        })
+    }
+}
+//last([...])
 

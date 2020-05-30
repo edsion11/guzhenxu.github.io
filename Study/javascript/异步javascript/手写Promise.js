@@ -138,7 +138,7 @@
           (value) => {
             resultArr[index] = value
             sum++
-            if (sum == arr.length) {
+            if (sum === arr.length) {
               resolve(resultArr)
             }
           },
