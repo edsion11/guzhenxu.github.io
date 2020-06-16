@@ -4,7 +4,6 @@ function Node(data, left, right) {
   this.right = right
   this.show = show
 }
-
 function show() {
   return this.data
 }
@@ -59,14 +58,14 @@ function inOrder(node) {
   }
 }
 var nums = new BST()
-nums.insert(23),
-nums.insert(45),
-    nums.insert(16),
-  nums.insert(37),
-  nums.insert(3),
-  nums.insert(99),
-  nums.insert(55),
-  nums.insert(12)
+nums.insert(23);
+nums.insert(45);
+nums.insert(16);
+nums.insert(37);
+nums.insert(3);
+nums.insert(99);
+nums.insert(55);
+nums.insert(12)
 //console.log("Inorder traversal: ")
 //inOrder(nums.root)
 //查找最小值

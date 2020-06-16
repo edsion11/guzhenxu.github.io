@@ -3,17 +3,18 @@
 	  this.push = push;
 	  this.pop = pop;
 	  this.top = 0
-	  this.length = length
+	  this.length = function (){
+		  return this.top
+	  }
+	  function push(element) {
+			this.dataStore[this.top++] = element
+		};
+	  function pop(element) {
+			return this.dataStore[--this.top];
+		}
 	}
 
-	function length() {
-	  return this.top
-	}
+module.exports = {
+	Stack
+}
 
-	function push(element) {
-	  this.dataStore[this.top++] = element
-	}
-
-	function pop(element) {
-	  return this.dataStore[--this.top];
-	}
