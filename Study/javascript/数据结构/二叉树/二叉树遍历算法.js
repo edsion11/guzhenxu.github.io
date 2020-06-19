@@ -15,7 +15,12 @@ function BST() {
     this.inOrder1 = inOrder1 //升序遍历
     //以下两个都是删除节点函数
 }
-
+function goAlongLeftBranch(x,S) {
+    while(x){
+        S.push(x);
+        x = x.left;
+    }
+}
 function insert(data) {
     var n = new Node(data, null, null)
     if (this.root == null) {
@@ -52,12 +57,6 @@ function inOrder1(node) {
 }
 //中序遍历迭代写法
 function inOrder2(node) {
-    function goAlongLeftBranch(x,S) {
-        while(x){
-            S.push(x);
-            x = x.left;
-        }
-    }
     let stack1 = new stack.Stack();
     let x = node
     while(1){
@@ -92,7 +91,73 @@ function preOrder2(node) {
         }
     }
 }
-
+//后序遍历递归写法
+function postOrder1(node) {
+    if(node!=null){
+        postOrder1(node.left)
+        postOrder1(node.right)
+        console.log(node.data)
+    }
+}
+//后序遍历迭代写法
+function postOrder2(root) {
+    const list = [];
+    const stack = [];
+    // 当根节点不为空的时候，将根节点入栈
+    if(root) stack.push(root)
+    while(stack.length > 0) {
+        const node = stack.pop()
+        // 根左右=>右左根
+        list.unshift(node.data)
+        // 先进栈左子树后右子树
+        // 出栈的顺序就变更为先右后左
+        // 右先头插法入list
+        // 左再头插法入list
+        // 实现右左根=>左右根
+        if(node.left !== null) {
+            stack.push(node.left)
+        }
+        if(node.right !== null) {
+            stack.push(node.right)
+        }
+    }
+    console.log(list)
+    return list
+}
+//后序遍历迭代法2
+function postOrder3(root) {
+    const printArr = []
+    if (!root) return printArr
+    const stack = []
+    stack.push({ color: 'white', node: root })
+    while (stack.length > 0) {
+        const { color, node } = stack.pop()
+        if (color === 'gray') {
+            printArr.push(node.data)
+        } else {
+            stack.push({ color: 'gray', node })
+            node.right && stack.push({ color: 'white', node: node.right })
+            node.left && stack.push({ color: 'white', node: node.left })
+        }
+    }
+    console.log(printArr)
+    return printArr
+}
+//层序遍历迭代
+function levelOrder(node) {
+    let QueQue = []
+    QueQue.unshift(node);
+    while(QueQue.length!==0){
+        let x = QueQue.pop()
+        console.log(x.data)
+        if(x.left){
+            QueQue.unshift(x.left)
+        }
+        if(x.right){
+            QueQue.unshift(x.right)
+        }
+    }
+}
 var nums = new BST()
 nums.insert(23);
 nums.insert(45);
@@ -105,6 +170,11 @@ nums.insert(12);
 //preOrder1(nums.root)
 //console.log("-------------------")
 //preOrder2(nums.root)
-inOrder1(nums.root)
-console.log("-------------------")
+//inOrder1(nums.root)
+//console.log("-------------------")
 inOrder2(nums.root)
+//postOrder1(nums.root)
+//console.log("---------------------")
+//postOrder2(nums.root)
+//postOrder3(nums.root)
+//levelOrder(nums.root)
