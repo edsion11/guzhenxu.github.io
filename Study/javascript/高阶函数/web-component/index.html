@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <script>
+        class CustomButton extends HTMLButtonElement{
+            constructor() {
+                super();
+            }
+            connectedCallback(){
+                this.addEventListener("click",function () {
+                    console.log("123")
+                })
+            }
+        }
+        customElements.define("customer-button",CustomButton,{extends:"button"})
+    </script>
+</head>
+<body>
+<button is="customer-button">hello</button>
+</body>
+</html>
