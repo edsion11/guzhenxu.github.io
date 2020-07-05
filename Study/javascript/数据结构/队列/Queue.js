@@ -26,4 +26,21 @@ class Queue{
         }
         return this.items[this.count-1]
     }
+    toString(){
+        if(this.isEmpty()){
+            return '';
+        }
+        let objString = `${this.items[this.lowestCount]}`;
+        for(let i = this.lowestCount+1;i<this.count;i++){
+            objString = `${objString},${this.items[i]}`;
+        }
+        //console.log(objString)
+        return objString
+    }
 }
+let q1=new Queue()
+q1.enqueue(1)
+q1.enqueue(2)
+q1.enqueue(3)
+console.log(q1.toString())
+
