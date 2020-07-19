@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>IndexB</title>
+  </head>
+  <body>
+    <div id="div">222</div>
+    <script>
+      window.addEventListener(
+        'message',
+        function (e) {
+          alert('data from domain1 ---> ' + e.data)
+
+          var data = JSON.parse(e.data)
+          if (data) {
+            data.number = 16
+
+            // 处理后再发回domain1
+            window.parent.postMessage(
+              JSON.stringify(data),
+              'http://127.0.0.1:5500/%E8%B7%A8%E5%9F%9F/indexa.html'
+            )
+          }
+        },
+        false
+      )
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>IndexA</title>
+  </head>
+  <body>
+    <iframe
+      id="iframe"
+      src="http://127.0.0.1:5500/%E8%B7%A8%E5%9F%9F/indexb.html"
+    ></iframe>
+    <script>
+      const iframe = document.getElementById('iframe')
+      iframe.onload = function () {
+        var data = {
+          name: 'aym',
+        }
+        // 向domain2传送跨域数据
+        iframe.contentWindow.postMessage(
+          JSON.stringify(data),
+          'http://127.0.0.1:5500/%E8%B7%A8%E5%9F%9F/indexb.html'
+        )
+      }
+      window.addEventListener(
+        'message',
+        function (e) {
+          alert('data from domain2 ---> ' + e.data)
+        },
+        false
+      )
+    </script>
+  </body>
+</html>
