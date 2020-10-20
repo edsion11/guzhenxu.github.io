@@ -18,3 +18,9 @@ var timeChunk = function (ary,fn,count) {
         },200)
     }
 }
+let arr  =[]
+function f1(){
+    console.log('1')
+}
+timeChunk(arr,f1,20)()
+
